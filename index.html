@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="bs" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DigitalAdvero — Digitalizacija biznisa u Bosni i Hercegovini</title>
+<meta name="description" content="DigitalAdvero je studentski tim iz Sarajeva koji lokalnim biznisima u BiH gradi moderne web stranice, Google prisutnost, online rezervacije i automatizaciju.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#050912">
+<meta name="color-scheme" content="dark light">
+<!-- Update the domain below (canonical, og:url, og:image, sitemap.xml, robots.txt) once the final URL is known. See README.md -->
+<link rel="canonical" href="https://digitaladvero.ba/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DigitalAdvero">
+<meta property="og:locale" content="bs_BA">
+<meta property="og:title" content="DigitalAdvero — Digitalizacija biznisa u Bosni i Hercegovini">
+<meta property="og:description" content="Studentski tim koji spaja programiranje, dizajn i ekonomiju: web stranice, Google prisutnost, online rezervacije i automatizacija za lokalne biznise u BiH.">
+<meta property="og:url" content="https://digitaladvero.ba/">
+<meta property="og:image" content="https://digitaladvero.ba/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DigitalAdvero — moderan digitalni sistem za moderne biznise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DigitalAdvero — Digitalizacija biznisa u Bosni i Hercegovini">
+<meta name="twitter:description" content="Web stranice, Google prisutnost, online rezervacije i automatizacija za lokalne biznise u BiH.">
+<meta name="twitter:image" content="https://digitaladvero.ba/assets/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Apply the saved theme before first paint (dark is the brand default) -->
+<script>
+(function () {
+  var root = document.documentElement, theme = "dark";
+  try { var saved = localStorage.getItem("da_theme"); if (saved === "light" || saved === "dark") theme = saved; } catch (e) {}
+  root.setAttribute("data-theme", theme);
+  root.classList.add("js");
+  var m = document.querySelector('meta[name="theme-color"]');
+  if (m) m.setAttribute("content", theme === "light" ? "#f4f6fc" : "#050912");
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DigitalAdvero",
+  "description": "Studentski tim koji lokalnim biznisima u Bosni i Hercegovini pomaže s web stranicama, Google prisutnošću, online rezervacijama i automatizacijom.",
+  "url": "https://digitaladvero.ba/",
+  "logo": "https://digitaladvero.ba/assets/apple-touch-icon.png",
+  "image": "https://digitaladvero.ba/assets/og-image.png",
+  "email": "digitaladvero@gmail.com",
+  "telephone": "+387 62 810 036",
+  "address": { "@type": "PostalAddress", "addressLocality": "Sarajevo", "addressCountry": "BA" },
+  "areaServed": { "@type": "Country", "name": "Bosna i Hercegovina" },
+  "sameAs": ["https://www.instagram.com/digitaladvero.ba/"],
+  "knowsAbout": ["Izrada web stranica", "Google Business optimizacija", "Online rezervacije", "Automatizacija poslovanja", "Branding"]
+}
+</script>
+</head>
+<body>
+
+<!-- Icon sprite: every icon on the page is referenced from here with <use href="#i-…"> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.8h.01M9 6.8h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 0 1 4 4v5.5"/><path d="M15.5 18H10a4 4 0 0 1-4-4V8.5"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.8 0-.7-.4-1.2-.4-1.9 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.8 17 3 12 3z"/><path d="M7.5 11h.01M10 7h.01M15 7.5h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4V5z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.5-3.4 3-5.4 6-5.4s5.5 2 6 5.4"/><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M18.5 14.8c1.4.7 2.2 2.3 2.5 5.2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.6-4 3.6-6 7.5-6s6.9 2 7.5 6"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6L7 10H4z"/><path d="M17.5 9a4 4 0 0 1 0 6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1.2-4.6L16.4 4.2a2.2 2.2 0 0 1 3.1 3.1L8.3 18.5 4 20z"/><path d="M14.5 6.1l3.4 3.4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 15l3.5-4 3 2.5L19 7.5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><path d="M19 5L7.8 16.2M19 19L7.8 7.8"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 5c-2-1.5-5-1.2-6 1-1.3 2.8.2 5 1 8 .5 2 1 4 2.5 4s1.5-3 2.5-3 1 3 2.5 3 2-2 2.5-4c.8-3 2.3-5.2 1-8-1-2.2-4-2.5-6-1z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M18.5 16l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 8h16l-1.2 11.2a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8L4 8z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M3 12h2M19 12h2M6 8v8M18 8v8M6 12h12"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M12 20s-7-4.6-8.5-9.2A4.6 4.6 0 0 1 12 7.4a4.6 4.6 0 0 1 8.5 3.4C19 15.4 12 20 12 20z"/><path d="M7 12h2.6l1.4-2.4 2 4.8 1.4-2.4H17"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M6 3v6a2.5 2.5 0 0 0 5 0V3M8.5 3v18"/><path d="M17 21V3c-2.2 1.4-3.5 4-3.5 7 0 1.6 1.4 2.5 3.5 2.5"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5v2M3 13h18"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3l5.2 5.2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6 .7-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6-4.4-4.2 6-.7z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0A2.7 2.7 0 0 0 20 9"/><path d="M5.5 12v8h13v-8M10 20v-4.5h4V20"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Preskoči na sadržaj</a>
+
+<!-- Layered page background: ambient orbs, architectural grid, film grain -->
+<div class="bg-stage" aria-hidden="true">
+  <span class="bg-orb bg-orb--a" data-py="0.05"></span>
+  <span class="bg-orb bg-orb--b" data-py="-0.04"></span>
+  <span class="bg-orb bg-orb--c" data-py="0.03"></span>
+  <span class="bg-grid"></span>
+  <span class="bg-grain"></span>
+</div>
+
+<!-- ======================= NAVIGATION ======================= -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="DigitalAdvero — početna" data-i18n-attrs="aria-label:nav.home">
+      <span class="brand-mark" aria-hidden="true">
+        <img class="logo-on-dark" src="assets/logo-mark-dark.png" alt="" width="220" height="132">
+        <img class="logo-on-light" src="assets/logo-mark-light.png" alt="" width="220" height="132">
+      </span>
+      <span class="brand-word">Digital<b>Advero</b></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Glavna navigacija" data-i18n-attrs="aria-label:nav.label">
+      <a href="#usluge" data-i18n="nav.services">Usluge</a>
+      <a href="#djelatnosti" data-i18n="nav.industries">Djelatnosti</a>
+      <a href="#about" data-i18n="nav.about">O nama</a>
+      <a href="#kako" data-i18n="nav.how">Kako radimo</a>
+      <a href="#faq" data-i18n="nav.faq">Pitanja</a>
+      <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Odabir jezika" data-i18n-attrs="aria-label:nav.lang">
+        <button type="button" data-lang="bs" aria-pressed="true">BS</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Prebaci na svijetlu temu">
+        <svg class="ico icon-sun" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="ico icon-moon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <a href="#kontakt" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.cta">Besplatne konsultacije</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Otvori meni" aria-expanded="false" aria-controls="mobilePanel" data-i18n-attrs="aria-label:nav.menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel" inert>
+  <nav class="mobile-links" aria-label="Mobilna navigacija" data-i18n-attrs="aria-label:nav.label">
+    <a href="#usluge"><small>01</small><span data-i18n="nav.services">Usluge</span></a>
+    <a href="#djelatnosti"><small>02</small><span data-i18n="nav.industries">Djelatnosti</span></a>
+    <a href="#about"><small>03</small><span data-i18n="nav.about">O nama</span></a>
+    <a href="#kako"><small>04</small><span data-i18n="nav.how">Kako radimo</span></a>
+    <a href="#faq"><small>05</small><span data-i18n="nav.faq">Pitanja</span></a>
+  </nav>
+  <div class="mobile-foot">
+    <div class="lang-toggle" role="group" aria-label="Odabir jezika" data-i18n-attrs="aria-label:nav.lang">
+      <button type="button" data-lang="bs" aria-pressed="true">BS</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#kontakt" class="btn btn-primary btn-block" data-i18n="hero.cta1">Pokrenimo vaš biznis</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-lights" aria-hidden="true">
+    <span class="hero-beam"></span>
+    <span class="arc hero-arc hero-arc--1" data-py="0.1"></span>
+    <span class="arc hero-arc hero-arc--2" data-py="-0.07"></span>
+    <canvas class="hero-particles" id="heroParticles"></canvas>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-brand reveal">DigitalAdvero</span>
+        <span class="hero-headline reveal" style="--d:.08s" data-i18n-html="hero.title">Moderan <span class="text-gradient">digitalni sistem</span> za moderne biznise.</span>
+      </h1>
+      <p class="hero-lede reveal" style="--d:.16s" data-i18n="hero.lede">Lokalnim biznisima u Bosni i Hercegovini donosimo ono što im najčešće nedostaje: web stranicu, vidljivost na Googleu, online rezervacije i automatizaciju — povezano u jedan sistem.</p>
+      <ul class="hero-keywords reveal" style="--d:.22s" aria-label="Šta radimo" data-i18n-attrs="aria-label:hero.kwlabel">
+        <li data-i18n="hero.kw1">Web stranice</li>
+        <li data-i18n="hero.kw2">Google</li>
+        <li data-i18n="hero.kw3">Rezervacije</li>
+        <li data-i18n="hero.kw4">Automatizacija</li>
+      </ul>
+      <div class="btn-row hero-actions reveal" style="--d:.3s">
+        <a href="#kontakt" class="btn btn-primary magnetic"><span data-i18n="hero.cta1">Pokrenimo vaš biznis</span> <svg class="ico btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#usluge" class="btn btn-secondary" data-i18n="hero.cta2">Pogledajte šta radimo</a>
+      </div>
+      <p class="hero-note reveal" style="--d:.38s"><span class="live-dot" aria-hidden="true"></span><span data-i18n="hero.note">Studentski tim iz Sarajeva · prve konsultacije su besplatne</span></p>
+    </div>
+
+    <div class="hero-visual reveal reveal--scale" style="--d:.2s" aria-hidden="true">
+      <span class="hero-halo"></span>
+      <svg class="hero-orbit" viewBox="0 0 560 560" fill="none">
+        <defs>
+          <linearGradient id="orbitStroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="var(--accent-2)" stop-opacity="0"/>
+            <stop offset=".5" stop-color="var(--accent-2)" stop-opacity=".7"/>
+            <stop offset="1" stop-color="var(--violet)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="280" cy="280" r="266" stroke="url(#orbitStroke)" stroke-width="1.2"/>
+        <circle cx="280" cy="280" r="212" stroke="url(#orbitStroke)" stroke-width="1" stroke-dasharray="2 9"/>
+        <circle cx="546" cy="280" r="4.5" fill="var(--accent-2)"/>
+        <circle cx="93" cy="468" r="3.5" fill="var(--violet)"/>
+        <circle cx="180" cy="90" r="3" fill="var(--accent-2)"/>
+      </svg>
+
+      <div class="dash glass tilt" data-tilt>
+        <div class="dash-top">
+          <span class="dash-dot"></span><span class="dash-dot"></span><span class="dash-dot"></span>
+          <span class="dash-live"><span class="pulse-dot"></span><span data-i18n="dash.live">Pregled uživo</span></span>
+        </div>
+        <div class="dash-body">
+          <div class="dash-card dash-chart">
+            <h4 data-i18n="dash.inquiries">Upiti klijenata</h4>
+            <div class="dash-big count-num" data-count-to="27">0</div>
+            <div class="dash-bars">
+              <span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:40%"></span><span style="--h:70%"></span><span style="--h:50%"></span><span style="--h:85%"></span><span style="--h:100%"></span>
+            </div>
+          </div>
+          <div class="dash-status">
+            <div class="status-pill"><span class="status-dot"></span><span class="status-label" data-i18n="dash.st.google">Google prisutnost</span><span class="status-val">★★★★★</span></div>
+            <div class="status-pill"><span class="status-dot is-blue"></span><span class="status-label" data-i18n="dash.st.newclient">Novi klijent</span><span class="status-val">+1</span></div>
+            <div class="status-pill"><span class="status-dot"></span><span class="status-label" data-i18n="dash.st.appt">Termin</span><span class="status-val" data-i18n="dash.st.apptval">Potvrđen</span></div>
+            <div class="status-pill"><span class="status-dot is-blue"></span><span class="status-label" data-i18n="dash.st.website">Web stranica</span><span class="status-val" data-i18n="dash.st.websiteval">Online</span></div>
+            <div class="status-pill"><span class="status-dot"></span><span class="status-label" data-i18n="dash.st.automation">Automatizacija</span><span class="status-val" data-i18n="dash.st.automationval">Aktivna</span></div>
+            <div class="status-pill"><span class="status-dot is-blue"></span><span class="status-label" data-i18n="dash.st.growth">Mjesečni rast</span><span class="status-val">↑ 18%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-chip glass fc-1">
+        <span class="fc-icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-pin"/></svg></span>
+        <span class="fc-text"><b data-i18n="dash.st.google">Google prisutnost</b><small data-i18n="chip.active">AKTIVNO</small></span>
+        <span class="fc-metric">+27%</span>
+      </div>
+      <div class="float-chip glass fc-2">
+        <span class="fc-icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-calendar"/></svg></span>
+        <span class="fc-text"><b data-i18n="chip.booking">Nova rezervacija</b><small data-i18n="chip.booking.st">Potvrđeno · danas 17:30</small></span>
+      </div>
+      <div class="float-chip glass fc-3">
+        <span class="fc-icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-flow"/></svg></span>
+        <span class="fc-text"><b data-i18n="dash.st.automation">Automatizacija</b><small data-i18n="dash.st.automationval">Aktivna</small></span>
+      </div>
+      <p class="hero-visual-note" data-i18n="hero.illus">Ilustrativan prikaz digitalnog sistema</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROBLEM ======================= -->
+<section class="section" id="problem" style="--gx1:92%;--gy1:0%;--gx2:4%;--gy2:100%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="problem.eyebrow">Zašto je važno</span>
+      <h2 class="h2" data-i18n="problem.title">Vaši klijenti su već online. Da li je i vaš biznis?</h2>
+      <p class="lede" data-i18n="problem.lede">Danas klijent prvo pretraži, pa tek onda zove. Ako vas ne može pronaći ili ne vidi kako da vas kontaktira, otići će drugom.</p>
+    </div>
+    <ol class="pain-grid">
+      <li class="pain reveal" style="--d:0s"><span class="pain-num">01</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg><h3 data-i18n="problem.1.h">Klijenti vas teško pronalaze na Googleu</h3><p data-i18n="problem.1.p">Kad neko u blizini pretražuje vašu djelatnost, vaš biznis se ne pojavljuje jasno — ili se ne pojavljuje uopšte.</p></li>
+      <li class="pain reveal" style="--d:.06s"><span class="pain-num">02</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><h3 data-i18n="problem.2.h">Web stranica je zastarjela ili ne postoji</h3><p data-i18n="problem.2.p">Bez stranice klijenti nemaju gdje vidjeti šta radite, cjenovnik ili radno vrijeme.</p></li>
+      <li class="pain reveal" style="--d:.12s"><span class="pain-num">03</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><h3 data-i18n="problem.3.h">Klijentima je teško da vas kontaktiraju</h3><p data-i18n="problem.3.p">Kontakt informacije su nepotpune ili razbacane, pa upiti ostaju bez odgovora.</p></li>
+      <li class="pain reveal" style="--d:.18s"><span class="pain-num">04</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg><h3 data-i18n="problem.4.h">Termini se zakazuju ručno</h3><p data-i18n="problem.4.p">Svaki termin znači poruku, poziv ili čekanje na odgovor — i za vas i za klijenta.</p></li>
+      <li class="pain reveal" style="--d:0s"><span class="pain-num">05</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><h3 data-i18n="problem.5.h">Recenzije se ne prikupljaju aktivno</h3><p data-i18n="problem.5.p">Zadovoljni klijenti rijetko sami ostave recenziju ako ih niko ne zamoli u pravom trenutku.</p></li>
+      <li class="pain reveal" style="--d:.06s"><span class="pain-num">06</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-share"/></svg><h3 data-i18n="problem.6.h">Društvene mreže se ažuriraju neredovno</h3><p data-i18n="problem.6.p">Nekonzistentan sadržaj otežava izgradnju povjerenja kod novih klijenata.</p></li>
+      <li class="pain reveal" style="--d:.12s"><span class="pain-num">07</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><h3 data-i18n="problem.7.h">Administracija oduzima previše vremena</h3><p data-i18n="problem.7.p">Ručno vođenje termina, upita i podataka troši sate koje biste mogli uložiti u biznis.</p></li>
+      <li class="pain reveal" style="--d:.18s"><span class="pain-num">08</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-layers"/></svg><h3 data-i18n="problem.8.h">Informacije su razbacane po platformama</h3><p data-i18n="problem.8.p">Google profil, Facebook, Instagram i web stranica često nisu usklađeni ni ažurni.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= TRANSFORMATION ======================= -->
+<section class="section section-band" id="transformacija" style="--gx1:50%;--gy1:0%;--gx2:50%;--gy2:100%">
+  <span class="arc" style="width:1300px;height:1300px;left:50%;top:-760px;margin-left:-650px;--arc-angle:160deg" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="tf.eyebrow">Transformacija</span>
+      <h2 class="h2" data-i18n-html="tf.title">Od tradicionalnog biznisa do <span class="text-gradient">modernog</span>.</h2>
+      <p class="lede" data-i18n="tf.lede">Mnogi lokalni biznisi već imaju kvalitetan proizvod i uslugu. Nedostaje im moderan digitalni sistem koji to pokazuje pravim ljudima. DigitalAdvero je most između ta dva svijeta.</p>
+    </div>
+
+    <div class="transform">
+      <article class="tf-card tf-before reveal reveal--left">
+        <span class="tf-label" data-i18n="tf.before.label">Tradicionalni biznis</span>
+        <h3 data-i18n="ba.before.name">Primjer: lokalni frizerski salon</h3>
+        <ul class="tf-list">
+          <li data-i18n="ba.before.1">Zastarjela Facebook stranica bez nedavnih objava</li>
+          <li data-i18n="ba.before.2">Ne posjeduje web stranicu</li>
+          <li data-i18n="ba.before.3">Slab ili nepotpun Google profil</li>
+          <li data-i18n="ba.before.4">Termini se dogovaraju ručno, porukama</li>
+          <li data-i18n="ba.before.5">Nekonzistentan vizuelni identitet</li>
+          <li data-i18n="ba.before.6">Nema praćenja klijenata nakon posjete</li>
+        </ul>
+      </article>
+
+      <div class="tf-bridge reveal reveal--scale" style="--d:.15s" aria-hidden="true">
+        <span class="tf-beam"></span>
+        <div class="tf-hub">
+          <span class="tf-hub-ring"></span>
+          <img class="logo-on-dark" src="assets/logo-mark-dark.png" alt="" width="220" height="132">
+          <img class="logo-on-light" src="assets/logo-mark-light.png" alt="" width="220" height="132">
+        </div>
+        <span class="tf-hub-name">Digital<b>Advero</b></span>
+        <span class="tf-hub-sub" data-i18n="tf.hub.sub">Programiranje + dizajn + biznis</span>
+      </div>
+
+      <article class="tf-card tf-after reveal reveal--right">
+        <span class="tf-label" data-i18n="tf.after.label">Moderan biznis</span>
+        <h3 data-i18n="ba.after.name">Isti salon, uz DigitalAdvero</h3>
+        <ul class="tf-list">
+          <li data-i18n="ba.after.1">Profesionalna web stranica</li>
+          <li data-i18n="ba.after.2">Optimizovan Google profil</li>
+          <li data-i18n="ba.after.3">Moderna prisutnost na društvenim mrežama</li>
+          <li data-i18n="ba.after.4">Upiti stižu online</li>
+          <li data-i18n="ba.after.5">Automatske potvrde termina</li>
+          <li data-i18n="ba.after.6">Klijenti redovno ostavljaju recenzije</li>
+          <li data-i18n="ba.after.7">Jasan pregled poslovanja kroz analitiku</li>
+        </ul>
+      </article>
+    </div>
+    <p class="fine-print reveal" data-i18n="ba.lede">Fiktivan primjer koji pokazuje tipičnu transformaciju — ne predstavlja stvarnog klijenta niti stvarne rezultate.</p>
+  </div>
+</section>
+
+<!-- ======================= CHAIN (Više od web stranice) ======================= -->
+<section class="section" id="zasto" style="--gx1:6%;--gy1:50%;--gx2:94%;--gy2:50%">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="why.eyebrow">Cijeli put klijenta</span>
+      <h2 class="h2" data-i18n="why.title">Više od web stranice.</h2>
+      <p class="lede" data-i18n="why.lede">Ne gradimo samo jedan dio vašeg digitalnog prisustva. Pratimo cijeli put — od trenutka kad vas neko pronađe do trenutka kad postane vjeran klijent.</p>
+    </div>
+    <ol class="chain reveal">
+      <li class="chain-node" style="--i:0"><span class="chain-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-store"/></svg></span><h3 data-i18n="flow.1">Biznis</h3><p data-i18n="flow.1.p">Kvalitetna usluga ili proizvod — to već imate.</p></li>
+      <li class="chain-node" style="--i:1"><span class="chain-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg></span><h3 data-i18n="flow.2">Google</h3><p data-i18n="flow.2.p">Klijenti vas pronalaze kad traže baš vas.</p></li>
+      <li class="chain-node" style="--i:2"><span class="chain-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg></span><h3 data-i18n="flow.3">Web stranica</h3><p data-i18n="flow.3.p">Vide šta nudite, kada radite i gdje ste.</p></li>
+      <li class="chain-node" style="--i:3"><span class="chain-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-user"/></svg></span><h3 data-i18n="flow.4">Klijent</h3><p data-i18n="flow.4.p">Stiče povjerenje prije prvog susreta.</p></li>
+      <li class="chain-node" style="--i:4"><span class="chain-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg></span><h3 data-i18n="flow.5">Rezervacija / kontakt</h3><p data-i18n="flow.5.p">Zakazuje online ili se javlja jednim klikom.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= ECOSYSTEM (Jedan partner) ======================= -->
+<section class="section section-band" id="rjesenje" style="--gx1:50%;--gy1:0%;--gx2:50%;--gy2:100%">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="solution.eyebrow">Rješenje</span>
+      <h2 class="h2" data-i18n="solution.title">Jedan partner. Jedan povezan sistem.</h2>
+      <p class="lede" data-i18n="solution.lede">DigitalAdvero povezuje najvažnije digitalne dijelove vašeg biznisa u jedan sistem — bez potrebe da razgovarate sa pet različitih izvođača.</p>
+    </div>
+
+    <div class="eco-wrap reveal" id="ecoWrap">
+      <div class="eco-layout">
+        <div class="eco-stage-col">
+          <div class="eco-stage" id="ecoStage">
+            <div class="eco-ambient" aria-hidden="true"></div>
+            <div class="eco-rings" aria-hidden="true"><span class="eco-ring r1"></span><span class="eco-ring r2"></span></div>
+            <svg class="eco-svg" id="ecoSvg" viewBox="0 0 700 620" role="img" aria-label="Dijagram: DigitalAdvero povezuje web stranicu, Google, društvene mreže, klijente, termine, recenzije, automatizaciju, analitiku i komunikaciju" data-i18n-attrs="aria-label:eco.aria">
+              <defs>
+                <radialGradient id="ecoCenterGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="ecoCenterFill" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#3f72ff"/><stop offset="1" stop-color="#6b54f5"/>
+                </linearGradient>
+              </defs>
+              <g id="ecoLinesLayer" class="eco-layer">
+                <path id="eco-line-0" class="eco-line eco-reveal" style="--d:0s" d="M350,310 L350.0,82.0"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="4s" begin="1.00s" repeatCount="indefinite" path="M350,310 L350.0,82.0"/></circle>
+                <path id="eco-line-1" class="eco-line eco-reveal" style="--d:.09s" d="M350,310 L496.6,135.3"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="5s" begin="1.35s" repeatCount="indefinite" path="M350,310 L496.6,135.3"/></circle>
+                <path id="eco-line-2" class="eco-line eco-reveal" style="--d:.18s" d="M350,310 L574.5,270.4"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="6s" begin="1.70s" repeatCount="indefinite" path="M350,310 L574.5,270.4"/></circle>
+                <path id="eco-line-3" class="eco-line eco-reveal" style="--d:.27s" d="M350,310 L547.5,424.0"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="4s" begin="2.05s" repeatCount="indefinite" path="M350,310 L547.5,424.0"/></circle>
+                <path id="eco-line-4" class="eco-line eco-reveal" style="--d:.36s" d="M350,310 L428.0,524.2"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="5s" begin="2.40s" repeatCount="indefinite" path="M350,310 L428.0,524.2"/></circle>
+                <path id="eco-line-5" class="eco-line eco-reveal" style="--d:.45s" d="M350,310 L272.0,524.2"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="6s" begin="2.75s" repeatCount="indefinite" path="M350,310 L272.0,524.2"/></circle>
+                <path id="eco-line-6" class="eco-line eco-reveal" style="--d:.54s" d="M350,310 L152.5,424.0"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="4s" begin="3.10s" repeatCount="indefinite" path="M350,310 L152.5,424.0"/></circle>
+                <path id="eco-line-7" class="eco-line eco-reveal" style="--d:.63s" d="M350,310 L125.5,270.4"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="5s" begin="3.45s" repeatCount="indefinite" path="M350,310 L125.5,270.4"/></circle>
+                <path id="eco-line-8" class="eco-line eco-reveal" style="--d:.72s" d="M350,310 L203.4,135.3"/>
+                <circle r="2.6" class="eco-particle"><animateMotion dur="6s" begin="3.80s" repeatCount="indefinite" path="M350,310 L203.4,135.3"/></circle>
+              </g>
+
+              <g id="ecoNodesLayer" class="eco-layer">
+                <circle cx="350" cy="310" r="105" fill="url(#ecoCenterGlow)"/>
+                <g class="eco-center-g" id="ecoCenter" tabindex="0" role="button" aria-label="DigitalAdvero">
+                  <circle cx="350" cy="310" r="66" class="eco-center-ring"/>
+                  <circle cx="350" cy="310" r="52" class="eco-center"/>
+                  <text x="350" y="306" text-anchor="middle" class="eco-center-text">Digital</text>
+                  <text x="350" y="323" text-anchor="middle" class="eco-center-text">Advero</text>
+                </g>
+
+                <g class="eco-node-g eco-reveal" data-key="website" data-line="eco-line-0" tabindex="0" role="button" aria-label="Web stranica" style="--d:0s;--float-dur:6.5s;--float-delay:0s"><g class="eco-node-float"><circle cx="350.0" cy="82.0" r="26" class="eco-node"/><svg class="ico eco-ico" x="338" y="70" width="24" height="24" viewBox="0 0 24 24"><use href="#i-globe"/></svg></g></g>
+                <text x="350.0" y="46.0" text-anchor="middle" class="eco-label" data-i18n="eco.website.label">Web stranica</text>
+
+                <g class="eco-node-g eco-reveal" data-key="google" data-line="eco-line-1" tabindex="0" role="button" aria-label="Google" style="--d:.09s;--float-dur:7.3s;--float-delay:-1.1s"><g class="eco-node-float"><circle cx="496.6" cy="135.3" r="26" class="eco-node"/><svg class="ico eco-ico" x="484.6" y="123.3" width="24" height="24" viewBox="0 0 24 24"><use href="#i-search"/></svg></g></g>
+                <text x="534.6" y="140.3" text-anchor="start" class="eco-label" data-i18n="eco.google.label">Google</text>
+
+                <g class="eco-node-g eco-reveal" data-key="social" data-line="eco-line-2" tabindex="0" role="button" aria-label="Društvene mreže" style="--d:.18s;--float-dur:8.1s;--float-delay:-2.2s"><g class="eco-node-float"><circle cx="574.5" cy="270.4" r="26" class="eco-node"/><svg class="ico eco-ico" x="562.5" y="258.4" width="24" height="24" viewBox="0 0 24 24"><use href="#i-share"/></svg></g></g>
+                <text x="574.5" y="234.0" text-anchor="middle" class="eco-label" data-i18n="eco.social.label">Društvene mreže</text>
+
+                <g class="eco-node-g eco-reveal" data-key="customers" data-line="eco-line-3" tabindex="0" role="button" aria-label="Klijenti" style="--d:.27s;--float-dur:8.9s;--float-delay:-3.3s"><g class="eco-node-float"><circle cx="547.5" cy="424.0" r="26" class="eco-node"/><svg class="ico eco-ico" x="535.5" y="412" width="24" height="24" viewBox="0 0 24 24"><use href="#i-users"/></svg></g></g>
+                <text x="547.5" y="468.0" text-anchor="middle" class="eco-label" data-i18n="eco.customers.label">Klijenti</text>
+
+                <g class="eco-node-g eco-reveal" data-key="appointments" data-line="eco-line-4" tabindex="0" role="button" aria-label="Termini" style="--d:.36s;--float-dur:6.5s;--float-delay:-4.4s"><g class="eco-node-float"><circle cx="428.0" cy="524.2" r="26" class="eco-node"/><svg class="ico eco-ico" x="416" y="512.2" width="24" height="24" viewBox="0 0 24 24"><use href="#i-calendar"/></svg></g></g>
+                <text x="428.0" y="568.2" text-anchor="middle" class="eco-label" data-i18n="eco.appointments.label">Termini</text>
+
+                <g class="eco-node-g eco-reveal" data-key="reviews" data-line="eco-line-5" tabindex="0" role="button" aria-label="Recenzije" style="--d:.45s;--float-dur:7.3s;--float-delay:-5.5s"><g class="eco-node-float"><circle cx="272.0" cy="524.2" r="26" class="eco-node"/><svg class="ico eco-ico" x="260" y="512.2" width="24" height="24" viewBox="0 0 24 24"><use href="#i-star"/></svg></g></g>
+                <text x="272.0" y="568.2" text-anchor="middle" class="eco-label" data-i18n="eco.reviews.label">Recenzije</text>
+
+                <g class="eco-node-g eco-reveal" data-key="automation" data-line="eco-line-6" tabindex="0" role="button" aria-label="Automatizacija" style="--d:.54s;--float-dur:8.1s;--float-delay:-6.6s"><g class="eco-node-float"><circle cx="152.5" cy="424.0" r="26" class="eco-node"/><svg class="ico eco-ico" x="140.5" y="412" width="24" height="24" viewBox="0 0 24 24"><use href="#i-flow"/></svg></g></g>
+                <text x="152.5" y="468.0" text-anchor="middle" class="eco-label" data-i18n="eco.automation.label">Automatizacija</text>
+
+                <g class="eco-node-g eco-reveal" data-key="analytics" data-line="eco-line-7" tabindex="0" role="button" aria-label="Analitika" style="--d:.63s;--float-dur:8.9s;--float-delay:-7.7s"><g class="eco-node-float"><circle cx="125.5" cy="270.4" r="26" class="eco-node"/><svg class="ico eco-ico" x="113.5" y="258.4" width="24" height="24" viewBox="0 0 24 24"><use href="#i-chart"/></svg></g></g>
+                <text x="125.5" y="234.0" text-anchor="middle" class="eco-label" data-i18n="eco.analytics.label">Analitika</text>
+
+                <g class="eco-node-g eco-reveal" data-key="comm" data-line="eco-line-8" tabindex="0" role="button" aria-label="Komunikacija" style="--d:.72s;--float-dur:6.5s;--float-delay:-8.8s"><g class="eco-node-float"><circle cx="203.4" cy="135.3" r="26" class="eco-node"/><svg class="ico eco-ico" x="191.4" y="123.3" width="24" height="24" viewBox="0 0 24 24"><use href="#i-chat"/></svg></g></g>
+                <text x="165.4" y="140.3" text-anchor="end" class="eco-label" data-i18n="eco.comm.label">Komunikacija</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="eco-panel glass" id="ecoPanel" aria-live="polite">
+          <span class="eco-panel-eyebrow" id="ecoPanelEyebrow" data-i18n="eco.panel.hint">Pređite mišem preko elementa</span>
+          <h3 class="eco-panel-title" id="ecoPanelTitle">DigitalAdvero</h3>
+          <p class="eco-panel-desc" id="ecoPanelDesc" data-i18n="eco.panel.default">Sve što vaš biznis treba, povezano u jedan sistem.</p>
+        </div>
+      </div>
+
+      <div class="eco-grid-mobile" id="ecoGridMobile">
+        <button class="eco-chip" data-key="website" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="eco.website.label">Web stranica</span></button>
+        <button class="eco-chip" data-key="google" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg><span data-i18n="eco.google.label">Google</span></button>
+        <button class="eco-chip" data-key="social" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-share"/></svg><span data-i18n="eco.social.label">Društvene mreže</span></button>
+        <button class="eco-chip" data-key="customers" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="eco.customers.label">Klijenti</span></button>
+        <button class="eco-chip" data-key="appointments" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="eco.appointments.label">Termini</span></button>
+        <button class="eco-chip" data-key="reviews" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="eco.reviews.label">Recenzije</span></button>
+        <button class="eco-chip" data-key="automation" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flow"/></svg><span data-i18n="eco.automation.label">Automatizacija</span></button>
+        <button class="eco-chip" data-key="analytics" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg><span data-i18n="eco.analytics.label">Analitika</span></button>
+        <button class="eco-chip" data-key="comm" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="eco.comm.label">Komunikacija</span></button>
+      </div>
+      <p class="eco-caption" data-i18n="eco.caption">Ne gradimo odvojene alate — povezujemo ih u jedan sistem koji radi zajedno.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SERVICES ======================= -->
+<section class="section" id="usluge" style="--gx1:94%;--gy1:8%;--gx2:6%;--gy2:96%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="services.eyebrow">Usluge</span>
+      <h2 class="h2" data-i18n="services.title">Od prve stranice do potpune digitalizacije.</h2>
+      <p class="lede" data-i18n="services.lede">Počnite od jedne stvari ili povežite sve odjednom — vi birate koliko daleko idete.</p>
+    </div>
+
+    <div class="svc-grid" data-spot-group>
+      <article class="svc svc--web spot reveal">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg></span>
+        <h3 data-i18n="svc.1.h">Izrada web stranica</h3>
+        <p data-i18n="svc.1.p">Moderne, brze stranice prilagođene mobitelu, napravljene tako da klijent odmah vidi šta nudite i kako vas kontaktirati.</p>
+        <div class="art-web" aria-hidden="true">
+          <div class="art-web-bar"><i></i><i></i><i></i><span></span></div>
+          <div class="art-web-hero"><b></b><b></b><em></em></div>
+          <div class="art-web-cards"><i></i><i></i><i></i></div>
+        </div>
+      </article>
+
+      <article class="svc svc--google spot reveal" style="--d:.08s">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <h3 data-i18n="svc.2.h">Google prisutnost</h3>
+        <p data-i18n="svc.2.p">Google Business optimizacija: uređujemo kako se vaš biznis prikazuje na Google pretrazi i Google mapama.</p>
+        <div class="art-google" aria-hidden="true">
+          <span class="art-pin"><svg class="ico" viewBox="0 0 24 24"><use href="#i-pin"/></svg></span>
+          <span class="art-stars">★★★★★</span>
+        </div>
+      </article>
+
+      <article class="svc svc--book spot reveal">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+        <h3 data-i18n="svc.5.h">Online rezervacije</h3>
+        <p data-i18n="svc.5.p">Jednostavan sistem za zakazivanje termina i upite, koji smanjuje ručni rad i propuštene pozive.</p>
+        <div class="art-cal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      </article>
+
+      <article class="svc spot reveal" style="--d:.08s">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flow"/></svg></span>
+        <h3 data-i18n="svc.7.h">Automatizacija</h3>
+        <p data-i18n="svc.7.p">Povezujemo alate koje već koristite i automatizujemo ponavljajuće poslove — potvrde, podsjetnike i obavještenja.</p>
+      </article>
+
+      <article class="svc spot reveal" style="--d:.16s">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-palette"/></svg></span>
+        <h3 data-i18n="svc.4.h">Brendiranje i dizajn</h3>
+        <p data-i18n="svc.4.p">Vizuelni identitet, meniji, flajeri i promotivni materijali — sve u istom prepoznatljivom stilu.</p>
+      </article>
+
+      <article class="svc spot reveal">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-share"/></svg></span>
+        <h3 data-i18n="svc.3.h">Društvene mreže</h3>
+        <p data-i18n="svc.3.p">Profesionalan sadržaj, vizuelni identitet i kontinuirano upravljanje profilima.</p>
+      </article>
+
+      <article class="svc spot reveal" style="--d:.08s">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg></span>
+        <h3 data-i18n="svc.6.h">CRM i organizacija poslovanja</h3>
+        <p data-i18n="svc.6.p">Potencijalni klijenti, upiti i praćenje na jednom mjestu — manje haosa, više pregleda.</p>
+      </article>
+
+      <article class="svc spot reveal" style="--d:.16s">
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-megaphone"/></svg></span>
+        <h3 data-i18n="svc.9.h">Digitalno oglašavanje</h3>
+        <p data-i18n="svc.9.p">Meta i Google kampanje osmišljene oko mjerljivih poslovnih ciljeva.</p>
+      </article>
+
+      <article class="svc spot reveal">
+        <span class="tag" data-i18n="svc.tag.request">Na upit</span>
+        <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cpu"/></svg></span>
+        <h3 data-i18n="svc.8.h">AI poslovna rješenja</h3>
+        <p data-i18n="svc.8.p">AI radni tokovi, asistenti i interni alati — razvijaju se u dogovoru s vama.</p>
+      </article>
+
+      <article class="svc svc--full spot reveal" style="--d:.08s">
+        <div class="svc-full-copy">
+          <span class="svc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <h3 data-i18n="svc.10.h">Digitalizacija poslovanja</h3>
+          <p data-i18n="svc.10.p">Kompletan paket koji spaja nekoliko usluga u jedan digitalni sistem: od stranice i Google profila do rezervacija i automatizacije.</p>
+        </div>
+        <a href="#kontakt" class="btn btn-primary svc-cta"><span data-i18n="svc.10.cta">Zatražite ponudu</span> <svg class="ico btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INDUSTRIES ======================= -->
+<section class="section section-band" id="djelatnosti" style="--gx1:8%;--gy1:0%;--gx2:92%;--gy2:100%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="industries.eyebrow">Djelatnosti</span>
+      <h2 class="h2" data-i18n="industries.title">Napravljeno za stvarne biznise.</h2>
+    </div>
+    <div class="ind-grid" data-spot-group>
+      <div class="ind spot reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-scissors"/></svg><h3 data-i18n="ind.1.h">Frizerski saloni</h3><p data-i18n="ind.1.p">Online zakazivanje i podsjetnici smanjuju prazne termine.</p></div>
+      <div class="ind spot reveal" style="--d:.05s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth"/></svg><h3 data-i18n="ind.2.h">Stomatološke ordinacije</h3><p data-i18n="ind.2.p">Profesionalna stranica gradi povjerenje prije prvog dolaska.</p></div>
+      <div class="ind spot reveal" style="--d:.1s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg><h3 data-i18n="ind.3.h">Kozmetički saloni</h3><p data-i18n="ind.3.p">Vizuelni portfolio pretvara pratioce u klijente.</p></div>
+      <div class="ind spot reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bag"/></svg><h3 data-i18n="ind.4.h">Trgovine</h3><p data-i18n="ind.4.p">Ažuran Google profil dovodi kupce do vrata.</p></div>
+      <div class="ind spot reveal" style="--d:.05s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-dumbbell"/></svg><h3 data-i18n="ind.5.h">Teretane</h3><p data-i18n="ind.5.p">Sistem za članarine smanjuje administraciju na recepciji.</p></div>
+      <div class="ind spot reveal" style="--d:.1s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pulse"/></svg><h3 data-i18n="ind.6.h">Fizioterapeuti</h3><p data-i18n="ind.6.p">Jednostavno zakazivanje poboljšava redovnost terapija.</p></div>
+      <div class="ind spot reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-utensils"/></svg><h3 data-i18n="ind.7.h">Restorani</h3><p data-i18n="ind.7.p">Ažuran meni i radno vrijeme znače manje propuštenih poziva.</p></div>
+      <div class="ind spot reveal" style="--d:.05s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-briefcase"/></svg><h3 data-i18n="ind.8.h">Profesionalne usluge</h3><p data-i18n="ind.8.p">Jasna web prisutnost gradi kredibilitet kod novih klijenata.</p></div>
+      <div class="ind spot reveal" style="--d:.1s"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg><h3 data-i18n="ind.9.h">Nekretnine</h3><p data-i18n="ind.9.p">Organizovan prikaz nekretnina olakšava praćenje upita.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ABOUT: STUDENT-LED TEAM ======================= -->
+<section class="section" id="about" style="--gx1:4%;--gy1:10%;--gx2:96%;--gy2:60%;--glow-o:.7">
+  <span class="arc" style="width:1000px;height:1000px;right:-560px;top:-120px;--arc-angle:210deg;opacity:.35" aria-hidden="true"></span>
+  <div class="container">
+    <div class="team-top">
+      <div class="team-copy reveal reveal--left">
+        <span class="eyebrow" data-i18n="team.eyebrow">Naš tim</span>
+        <h2 class="h2" data-i18n-html="team.title">Studentski tim.<br><span class="text-gradient">Tri pogleda</span> na vaš biznis.</h2>
+        <p class="lede" data-i18n="team.lede">Iza DigitalAdvero stoje studenti različitih usmjerenja — programeri, grafički dizajneri i ekonomisti. Svako od nas vidi vaš biznis iz drugog ugla, a zajedno ga vidimo cijelog.</p>
+        <p class="team-body" data-i18n="team.body">Zato ne pravimo samo web stranicu. Radimo na tome kako vas klijenti pronalaze, kako izgledate, kako vam se javljaju i koliko je sve to organizovano iza scene.</p>
+        <p class="team-equation" aria-label="Tehnologija plus dizajn plus biznis" data-i18n-attrs="aria-label:team.eq.aria">
+          <span data-i18n="team.eq.1">Tehnologija</span><i>+</i><span data-i18n="team.eq.2">Dizajn</span><i>+</i><span data-i18n="team.eq.3">Biznis</span>
+        </p>
+      </div>
+
+      <div class="venn reveal reveal--right" id="venn" role="img" aria-label="Tri kruga koji se preklapaju: programiranje, dizajn i biznis — u sredini je DigitalAdvero" data-i18n-attrs="aria-label:team.venn.aria">
+        <svg viewBox="0 0 520 470" fill="none">
+          <defs>
+            <radialGradient id="vnA" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#5b93ff" stop-opacity=".55"/><stop offset="1" stop-color="#3f6cff" stop-opacity=".16"/></radialGradient>
+            <radialGradient id="vnB" cx="60%" cy="35%" r="75%"><stop offset="0" stop-color="#a08bff" stop-opacity=".55"/><stop offset="1" stop-color="#7a5cf5" stop-opacity=".16"/></radialGradient>
+            <radialGradient id="vnC" cx="50%" cy="65%" r="75%"><stop offset="0" stop-color="#4fd0ff" stop-opacity=".5"/><stop offset="1" stop-color="#2aa6e8" stop-opacity=".14"/></radialGradient>
+            <radialGradient id="vnCore" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".45" stop-color="#bcd4ff" stop-opacity=".45"/><stop offset="1" stop-color="#7fa8ff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle class="venn-ring" cx="260" cy="232" r="222" stroke="var(--line-strong)" stroke-dasharray="2 8"/>
+          <g class="venn-c venn-c--a"><circle cx="200" cy="184" r="128" fill="url(#vnA)" stroke="#7aa6ff" stroke-opacity=".75"/></g>
+          <g class="venn-c venn-c--b"><circle cx="320" cy="184" r="128" fill="url(#vnB)" stroke="#b39dff" stroke-opacity=".75"/></g>
+          <g class="venn-c venn-c--c"><circle cx="260" cy="288" r="128" fill="url(#vnC)" stroke="#6fd6ff" stroke-opacity=".75"/></g>
+          <circle class="venn-core" cx="260" cy="219" r="46" fill="url(#vnCore)"/>
+          <text class="venn-label" x="134" y="160" text-anchor="middle" data-i18n="team.venn.1">PROGRAMIRANJE</text>
+          <text class="venn-label" x="386" y="160" text-anchor="middle" data-i18n="team.venn.2">DIZAJN</text>
+          <text class="venn-label" x="260" y="352" text-anchor="middle" data-i18n="team.venn.3">BIZNIS</text>
+          <text class="venn-mid" x="260" y="224" text-anchor="middle">DA</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="disc-grid" data-spot-group>
+      <article class="disc spot reveal">
+        <span class="disc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg></span>
+        <h3 data-i18n="team.d1.h">Programiranje</h3>
+        <p data-i18n="team.d1.p">Gradimo brza, moderna i funkcionalna digitalna rješenja — od web stranica do sistema za rezervacije i automatizacije.</p>
+        <ul class="disc-tags"><li data-i18n="team.d1.t1">Web stranice</li><li data-i18n="team.d1.t2">Rezervacije</li><li data-i18n="team.d1.t3">Automatizacija</li></ul>
+      </article>
+      <article class="disc spot reveal" style="--d:.08s">
+        <span class="disc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pen"/></svg></span>
+        <h3 data-i18n="team.d2.h">Dizajn</h3>
+        <p data-i18n="team.d2.p">Kreiramo profesionalan vizuelni identitet i interfejse zbog kojih se vaš biznis izdvaja od konkurencije.</p>
+        <ul class="disc-tags"><li data-i18n="team.d2.t1">Vizuelni identitet</li><li data-i18n="team.d2.t2">UI dizajn</li><li data-i18n="team.d2.t3">Materijali</li></ul>
+      </article>
+      <article class="disc spot reveal" style="--d:.16s">
+        <span class="disc-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg></span>
+        <h3 data-i18n="team.d3.h">Biznis</h3>
+        <p data-i18n="team.d3.p">Razumijemo klijente, pozicioniranje i organizaciju — i kako digitalni alati mogu podržati rast, a ne samo lijepo izgledati.</p>
+        <ul class="disc-tags"><li data-i18n="team.d3.t1">Klijenti</li><li data-i18n="team.d3.t2">Pozicioniranje</li><li data-i18n="team.d3.t3">Organizacija</li></ul>
+      </article>
+    </div>
+
+    <blockquote class="team-quote reveal">
+      <p data-i18n="team.quote">Studenti smo, i to nam je prednost: programiranje, dizajn i ekonomija u jednom timu daju lokalnim biznisima ono što im najčešće nedostaje — moderan digitalni sistem.</p>
+    </blockquote>
+
+    <ul class="strengths">
+      <li class="reveal"><span class="strength-num">01</span><h3 data-i18n="team.s1.h">Mladi talent</h3><p data-i18n="team.s1.p">Svježa znanja, radoznalost i želja da svaki projekat uradimo kako treba.</p></li>
+      <li class="reveal" style="--d:.08s"><span class="strength-num">02</span><h3 data-i18n="team.s2.h">Moderne vještine</h3><p data-i18n="team.s2.p">Alate i tehnologije koje se danas koriste učimo i primjenjujemo svaki dan.</p></li>
+      <li class="reveal" style="--d:.16s"><span class="strength-num">03</span><h3 data-i18n="team.s3.h">Različite perspektive</h3><p data-i18n="team.s3.p">Isti problem gledamo kroz kod, dizajn i poslovni račun — ne samo kroz jedan od njih.</p></li>
+    </ul>
+
+    <div class="founder-row">
+      <div class="founder-story reveal reveal--left">
+        <span class="eyebrow" data-i18n="about.eyebrow">Priča iza DigitalAdvero</span>
+        <h3 class="h3" data-i18n="about.title">Upoznajte DigitalAdvero</h3>
+        <p class="lede" data-i18n="about.p1">DigitalAdvero je pokrenut oko jedne jednostavne ideje: mnogi lokalni biznisi su izuzetni u onome što rade, ali im nedostaju digitalni sistemi potrebni da se ravnopravno takmiče na modernom tržištu.</p>
+        <p class="lede" data-i18n="about.p2">DigitalAdvero postoji da premosti taj jaz — pretvarajući razbacano digitalno prisustvo u jedan jasan, funkcionalan sistem.</p>
+      </div>
+      <div class="reveal reveal--right"><div class="founder-card glass tilt" data-tilt>
+        <img class="founder-photo" src="assets/founder.jpg" alt="Adnan, CEO i osnivač DigitalAdvero-a" width="200" height="200" loading="lazy" data-i18n-attrs="alt:about.alt">
+        <h3 data-i18n="about.name">Adnan</h3>
+        <p class="founder-role" data-i18n="about.role">CEO i osnivač</p>
+        <p class="founder-bio" data-i18n="about.bio">Osnivač DigitalAdvero-a, fokusiran na to da digitalizacija bude jednostavna i dostupna svakom lokalnom biznisu u Bosni i Hercegovini.</p>
+        <p class="founder-bio founder-bio--2" data-i18n="about.bio2">Trenutno studira medicinu, a DigitalAdvero gradi paralelno sa studijem — uz istu posvećenost i pažnju prema detaljima na obje strane.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HOW WE WORK ======================= -->
+<section class="section section-band" id="kako" style="--gx1:50%;--gy1:0%;--gx2:50%;--gy2:100%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="how.eyebrow">Proces</span>
+      <h2 class="h2" data-i18n="how.title">Kako radimo</h2>
+    </div>
+    <ol class="steps reveal">
+      <li class="step"><span class="step-num">01</span><h3 data-i18n="how.1.h">Otkrivanje</h3><p data-i18n="how.1.p">Upoznajemo se s tim kako vaš biznis trenutno posluje.</p></li>
+      <li class="step"><span class="step-num">02</span><h3 data-i18n="how.2.h">Izgradnja</h3><p data-i18n="how.2.p">Kreiramo digitalne sisteme koji su vam potrebni.</p></li>
+      <li class="step"><span class="step-num">03</span><h3 data-i18n="how.3.h">Povezivanje</h3><p data-i18n="how.3.p">Povezujemo vašu stranicu, klijente, komunikaciju, podatke i automatizaciju.</p></li>
+      <li class="step"><span class="step-num">04</span><h3 data-i18n="how.4.h">Rast</h3><p data-i18n="how.4.p">Održavamo, unapređujemo i proširujemo vaše digitalne sisteme.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= SIMULATOR ======================= -->
+<section class="section" id="simulator" style="--gx1:6%;--gy1:0%;--gx2:94%;--gy2:100%">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="sim.eyebrow">Put klijenta</span>
+      <h2 class="h2" data-i18n="sim.title">Vidite šta digitalizacija može promijeniti</h2>
+      <p class="lede" data-i18n="sim.lede">Odaberite vrstu biznisa i pogledajte ilustrativan digitalni put klijenta, od pretrage do povratka.</p>
+    </div>
+    <div class="sim-tabs reveal" role="tablist" id="simTabs" aria-label="Vrsta biznisa" data-i18n-attrs="aria-label:sim.tabs">
+      <button class="sim-tab is-active" data-biz="barber" role="tab" aria-selected="true" aria-controls="simFlow" id="tab-barber"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-scissors"/></svg><span data-i18n="sim.tab.barber">Frizerski salon</span></button>
+      <button class="sim-tab" data-biz="dentist" role="tab" aria-selected="false" aria-controls="simFlow" id="tab-dentist" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth"/></svg><span data-i18n="sim.tab.dentist">Stomatološka ordinacija</span></button>
+      <button class="sim-tab" data-biz="restaurant" role="tab" aria-selected="false" aria-controls="simFlow" id="tab-restaurant" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-utensils"/></svg><span data-i18n="sim.tab.restaurant">Restoran</span></button>
+      <button class="sim-tab" data-biz="shop" role="tab" aria-selected="false" aria-controls="simFlow" id="tab-shop" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bag"/></svg><span data-i18n="sim.tab.shop">Trgovina</span></button>
+      <button class="sim-tab" data-biz="gym" role="tab" aria-selected="false" aria-controls="simFlow" id="tab-gym" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-dumbbell"/></svg><span data-i18n="sim.tab.gym">Teretana</span></button>
+      <button class="sim-tab" data-biz="property" role="tab" aria-selected="false" aria-controls="simFlow" id="tab-property" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="sim.tab.property">Nekretnine</span></button>
+    </div>
+    <div class="sim-stage reveal" id="simFlow" role="tabpanel" aria-labelledby="tab-barber"></div>
+    <p class="fine-print" data-i18n="sim.note">Ilustrativan primjer digitalnog toka klijenta — ne predstavlja stvarne podatke niti garantovane rezultate.</p>
+  </div>
+</section>
+
+<!-- ======================= VISION (always-dark band) ======================= -->
+<section class="section vision" id="vizija">
+  <span class="vision-aurora" aria-hidden="true"></span>
+  <span class="arc" style="width:1200px;height:1200px;left:50%;bottom:-760px;margin-left:-600px;--arc-angle:20deg;opacity:.7" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="vision.eyebrow">Vizija</span>
+      <h2 class="h2" data-i18n="vision.title">Gradimo nešto više od digitalnog marketinga.</h2>
+      <p class="lede" data-i18n="vision.lede">Dugoročna vizija DigitalAdvero-a je da postane širi partner za digitalizaciju i poslovanje — ne samo za marketing.</p>
+    </div>
+    <ul class="vision-list reveal">
+      <li data-i18n="vision.1">Upravljanje nekretninama</li>
+      <li data-i18n="vision.2">Sistemi za restorane</li>
+      <li data-i18n="vision.3">Poslovna automatizacija</li>
+      <li data-i18n="vision.4">AI sistemi</li>
+      <li data-i18n="vision.5">Infrastruktura za zakazivanje</li>
+      <li data-i18n="vision.6">Sistemi za upravljanje klijentima</li>
+      <li data-i18n="vision.7">Operativna podrška</li>
+    </ul>
+    <p class="fine-print reveal" data-i18n="vision.note">Ovo predstavlja dugoročnu viziju, a ne trenutnu ponudu usluga.</p>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="section" id="kontakt" style="--gx1:92%;--gy1:0%;--gx2:8%;--gy2:100%;--glow-o:.8">
+  <span class="arc" style="width:1100px;height:1100px;left:-480px;top:-200px;--arc-angle:60deg" aria-hidden="true"></span>
+  <div class="container contact-grid">
+    <div class="reveal reveal--left">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Kontakt</span>
+      <h2 class="h2" data-i18n-html="contact.title">Pokrenimo <span class="text-gradient">vaš biznis</span>.</h2>
+      <p class="lede" data-i18n="contact.lede">Javite nam se i zakažite besplatne konsultacije — bez ikakvih obaveza.</p>
+      <div class="contact-info">
+        <a href="tel:+38762810036" class="contact-row"><span class="contact-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="contact-k" data-i18n="contact.phone">Telefon</span><span class="contact-v">+387 62 810 036</span></a>
+        <a href="mailto:digitaladvero@gmail.com" class="contact-row"><span class="contact-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></span><span class="contact-k" data-i18n="contact.email">Email</span><span class="contact-v">digitaladvero@gmail.com</span></a>
+        <div class="contact-row"><span class="contact-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></span><span class="contact-k" data-i18n="contact.location">Lokacija</span><span class="contact-v" data-i18n="contact.locationv">Sarajevo, Bosna i Hercegovina</span></div>
+        <a href="https://www.instagram.com/digitaladvero.ba/" target="_blank" rel="noopener" class="contact-row"><span class="contact-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg></span><span class="contact-k">Instagram</span><span class="contact-v">@digitaladvero.ba</span></a>
+      </div>
+    </div>
+
+    <form class="contact-form glass spot reveal reveal--right" id="consultForm" novalidate>
+      <div class="field">
+        <label for="f-name" data-i18n="form.name">Ime i prezime</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+        <span class="field-error" id="e-name" data-i18n="form.err.name">Unesite ime i prezime.</span>
+      </div>
+      <div class="field">
+        <label for="f-biz" data-i18n="form.biz">Naziv biznisa</label>
+        <input id="f-biz" name="business" type="text" autocomplete="organization" required aria-describedby="e-biz">
+        <span class="field-error" id="e-biz" data-i18n="form.err.biz">Unesite naziv biznisa.</span>
+      </div>
+      <div class="field">
+        <label for="f-contact" data-i18n="form.contact">Telefon ili email</label>
+        <input id="f-contact" name="contact" type="text" autocomplete="email" required aria-describedby="e-contact">
+        <span class="field-error" id="e-contact" data-i18n="form.err.contact">Unesite telefon ili email.</span>
+      </div>
+      <div class="field">
+        <label for="f-type" data-i18n="form.type">Vrsta biznisa</label>
+        <select id="f-type" name="type" required aria-describedby="e-type">
+          <option value="" data-i18n="form.type.0">Odaberite...</option>
+          <option data-i18n="form.type.1">Frizerski salon</option>
+          <option data-i18n="form.type.2">Stomatološka ordinacija</option>
+          <option data-i18n="form.type.3">Kozmetički salon</option>
+          <option data-i18n="form.type.4">Trgovina</option>
+          <option data-i18n="form.type.5">Teretana</option>
+          <option data-i18n="form.type.6">Fizioterapija</option>
+          <option data-i18n="form.type.7">Restoran</option>
+          <option data-i18n="form.type.8">Profesionalne usluge</option>
+          <option data-i18n="form.type.9">Nekretnine</option>
+          <option data-i18n="form.type.10">Ostalo</option>
+        </select>
+        <span class="field-error" id="e-type" data-i18n="form.err.type">Odaberite vrstu biznisa.</span>
+      </div>
+      <div class="field field-full">
+        <label for="f-help" data-i18n="form.help">Šta vam je potrebno?</label>
+        <select id="f-help" name="help">
+          <option data-i18n="form.help.1">Web stranica</option>
+          <option data-i18n="form.help.2">Google profil</option>
+          <option data-i18n="form.help.3">Društvene mreže</option>
+          <option data-i18n="form.help.4">Sistem za zakazivanje</option>
+          <option data-i18n="form.help.5">Kompletna digitalizacija</option>
+          <option data-i18n="form.help.6">Nešto drugo</option>
+        </select>
+      </div>
+      <div class="field field-full">
+        <label for="f-msg" data-i18n="form.msg">Poruka</label>
+        <textarea id="f-msg" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block form-submit"><span data-i18n="form.submit">Zatražite besplatne konsultacije</span> <svg class="ico btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p class="form-success" id="formSuccess" role="status" data-i18n="form.success">Hvala! Otvorit će se vaš email klijent sa popunjenim upitom — samo pošaljite poruku i javit ćemo vam se uskoro.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section section-band" id="faq" style="--gx1:50%;--gy1:0%;--gx2:90%;--gy2:100%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="faq.eyebrow">Pitanja</span>
+      <h2 class="h2" data-i18n="faq.title">Najčešća pitanja</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span data-i18n="faq.1.q">Šta radi DigitalAdvero?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p data-i18n="faq.1.a">Pomažemo lokalnim biznisima u Bosni i Hercegovini da postanu digitalno vidljiviji, dostupniji i organizovaniji — kroz web stranice, Google prisustvo, društvene mreže i automatizaciju.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span data-i18n="faq.10.q">Vi ste studenti — mogu li vam vjerovati svoj biznis?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p data-i18n="faq.10.a">Da. Studenti smo i to nam je prednost: u timu su programeri, dizajneri i ekonomisti, pa vaš biznis razmatramo iz više uglova, a ne samo tehnički. Sve dogovaramo jasno i unaprijed, a prve konsultacije su besplatne.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span data-i18n="faq.2.q">S kim sarađujete?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p data-i18n="faq.2.a">Prvenstveno s lokalnim biznisima poput frizerskih salona, stomatoloških ordinacija, kozmetičkih salona, prodavnica, teretana, fizioterapeuta i restorana.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span data-i18n="faq.3.q">Da li mi je potrebna web stranica?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p data-i18n="faq.3.a">Ako klijenti trenutno teško pronalaze informacije o vašem biznisu online, vjerovatno jeste. Rado ćemo razgovarati o tome šta ima najviše smisla za vas.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span data-i18n="faq.4.q">Možete li upravljati mojim društvenim mrežama?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p data-i18n="faq.4.a">Da, to je jedna od naših osnovnih usluga.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span data-i18n="faq.5.q">Možete li mi pomoći da se bolje pojavim na Googleu?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div><p data-i18n="faq.5.a">Da — Google Business optimizacija je jedna od usluga koje nudimo od početka.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span data-i18n="faq.6.q">Možete li automatizovati zahtjeve za termine?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p data-i18n="faq.6.a">Da, u okviru sistema za zakazivanje koji postavljamo za vaš biznis.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span data-i18n="faq.7.q">Radite li s malim biznisima?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div><p data-i18n="faq.7.a">Da — mali, lokalni biznisi su naš prvenstveni fokus.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a9" id="faq-q9"><span data-i18n="faq.8.q">Možete li napraviti kompletan paket digitalizacije?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div><p data-i18n="faq.8.a">Da — to je usluga „Digitalizacija poslovanja“, koja kombinuje više usluga u jedan sistem.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a10" id="faq-q10"><span data-i18n="faq.9.q">Nudite li mjesečno upravljanje?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-a" id="faq-a10" role="region" aria-labelledby="faq-q10"><div><p data-i18n="faq.9.a">Da, dostupno je kontinuirano upravljanje web stranicom, društvenim mrežama i sistemima — detalje dogovaramo direktno s vama.</p></div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img class="footer-logo logo-on-dark" src="assets/logo-dark.png" alt="DigitalAdvero logo" width="420" height="253" loading="lazy">
+      <img class="footer-logo logo-on-light" src="assets/logo-light.png" alt="DigitalAdvero logo" width="420" height="253" loading="lazy">
+      <p class="footer-tag" data-i18n="footer.tag">Digitalizacija i rast biznisa. Studentski tim iz Sarajeva.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-h" data-i18n="footer.contact">Kontakt</span>
+      <a href="tel:+38762810036">+387 62 810 036</a>
+      <a href="mailto:digitaladvero@gmail.com">digitaladvero@gmail.com</a>
+      <span data-i18n="contact.locationv">Sarajevo, Bosna i Hercegovina</span>
+      <a href="https://www.instagram.com/digitaladvero.ba/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg>@digitaladvero.ba</a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-h" data-i18n="footer.links">Brze veze</span>
+      <a href="#top" data-i18n="footer.home">Početna</a>
+      <a href="#usluge" data-i18n="nav.services">Usluge</a>
+      <a href="#djelatnosti" data-i18n="nav.industries">Djelatnosti</a>
+      <a href="#about" data-i18n="nav.about">O nama</a>
+      <a href="#kontakt" data-i18n="footer.contactlink">Kontakt</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span data-i18n="footer.rights">© 2026 DigitalAdvero. Sva prava zadržana.</span>
+    <a href="#top" class="to-top"><span data-i18n="footer.top">Nazad na vrh</span> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+  </div>
+</footer>
+
+<script src="js/i18n-en.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/secret.js" defer></script>
+</body>
+</html>
