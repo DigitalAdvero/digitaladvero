@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Update the domain to your final URL (see README.md)
-Sitemap: https://digitaladvero.ba/sitemap.xml
+Sitemap: https://digitaladvero.com/sitemap.xml

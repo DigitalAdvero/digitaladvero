@@ -12,12 +12,12 @@ No build step or `.nojekyll` file is needed: the site has no `_`-prefixed folder
 
 ## Before you go live — set the real URL
 
-The SEO files currently point at `https://digitaladvero.ba/`. If the final address is different (for example the `github.io` URL), replace it in:
+The SEO files currently point at `https://digitaladvero.com/`. If the final address is different (for example the `github.io` URL), replace it in:
 
 - `index.html` — `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`, and the JSON-LD block (`url`, `logo`, `image`)
 - `sitemap.xml` and `robots.txt`
 
-Search for `digitaladvero.ba` to find every place.
+Search for `digitaladvero.com` to find every place.
 
 ## Structure
 

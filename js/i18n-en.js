@@ -6,7 +6,7 @@ window.DA_EN = {
 
   "a11y.skip": "Skip to content",
   "nav.home": "DigitalAdvero — home", "nav.label": "Main navigation", "nav.lang": "Language", "nav.menu": "Open menu",
-  "nav.services": "Services", "nav.industries": "Industries", "nav.about": "About", "nav.how": "How we work", "nav.faq": "FAQ",
+  "nav.services": "Services", "nav.work": "Work", "nav.industries": "Industries", "nav.about": "About", "nav.how": "How we work", "nav.faq": "FAQ",
   "nav.cta": "Free consultation",
 
   "hero.title": "A modern <span class=\"text-gradient\">digital system</span> for modern businesses.",
@@ -91,6 +91,24 @@ window.DA_EN = {
   "ind.7.h": "Restaurants", "ind.7.p": "An up-to-date menu and opening hours mean fewer missed calls.",
   "ind.8.h": "Professional services", "ind.8.p": "A clear web presence builds credibility with new clients.",
   "ind.9.h": "Real estate", "ind.9.p": "Organized listings make it easier to track inquiries.",
+
+  "work.eyebrow": "Work",
+  "work.title": "See what we can build for you.",
+  "work.lede": "Four complete demo websites for different industries. Open any of them and try it the way a customer would.",
+  "work.tag": "Demo", "work.cta": "View the demo",
+  "work.1.type": "Barber shop · Sarajevo",
+  "work.1.p": "A dark, elegant site for a men's barber shop: services with prices, the team, a gallery and online appointment booking.",
+  "work.1.f1": "Online booking", "work.1.f2": "Live opening hours", "work.1.f3": "Service price list",
+  "work.2.type": "Restaurant · Sarajevo",
+  "work.2.p": "A contemporary restaurant presented through photography, a full menu and simple table reservations, in Bosnian and English.",
+  "work.2.f1": "Table reservations", "work.2.f2": "Online menu", "work.2.f3": "BS / EN",
+  "work.3.type": "Dental practice · Sarajevo",
+  "work.3.p": "A calm, professional site that builds trust before the first visit: services, the team, before/after examples and booking.",
+  "work.3.f1": "Appointment booking", "work.3.f2": "Before / after", "work.3.f3": "Team profiles",
+  "work.4.type": "Apartments · Mostar",
+  "work.4.p": "Boutique apartments with an availability check, a detailed page for every apartment and a guest guide.",
+  "work.4.f1": "Availability check", "work.4.f2": "Apartment details", "work.4.f3": "Guest guide",
+  "work.note": "Demo projects for fictional businesses, built to show our work. The names, addresses, reviews and bookings on them are not real.",
 
   "team.eyebrow": "Our team",
   "team.title": "A student team.<br><span class=\"text-gradient\">Three perspectives</span> on your business.",
