@@ -423,7 +423,7 @@
     });
     function setSending(on) {
       sending = on;
-      submitBtn.disabled = on; submitBtn.classList.toggle("is-sending", on); submitBtn.setAttribute("aria-busy", String(on));
+      submitBtn.classList.toggle("is-sending", on); submitBtn.setAttribute("aria-busy", String(on)); submitBtn.setAttribute("aria-disabled", String(on)); // not .disabled, so keyboard focus stays on the button
       if (on) { submitLabel.dataset.idle = submitLabel.textContent; submitLabel.textContent = ui("sending"); }
       else if (submitLabel.textContent === UI.bs.sending || submitLabel.textContent === UI.en.sending) submitLabel.textContent = submitLabel.dataset.idle;
     }
@@ -436,7 +436,8 @@
         "Ime i prezime": g("f-name"), "Biznis": g("f-biz"), "Kontakt": contact, "Vrsta biznisa": g("f-type"),
         "Potrebna pomoć": g("f-help"), "Poruka": g("f-msg") || "-", "Jezik stranice": currentLang === "en" ? "engleski" : "bosanski"
       };
-      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)) data.replyto = contact;
+      var email = contact.match(/[^\s@,;\/<>()]+@[^\s@,;\/<>()]+\.[^\s@,;\/<>()]+/); // "061 123 456, ana@gmail.com" works too
+      if (email) data.replyto = email[0].replace(/[.,;:]+$/, "");
       var ctrl = window.AbortController ? new AbortController() : null, timer = ctrl && setTimeout(function () { ctrl.abort(); }, 15000);
       setSending(true); show(null);
       fetch("https://api.web3forms.com/submit", {
