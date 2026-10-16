@@ -588,6 +588,10 @@ a.contact-row:hover .contact-v { color: var(--accent-text); }
 .form-submit-wa .ico { width: 18px; height: 18px; color: #25d366; }
 .form-success { display: none; grid-column: 1 / -1; margin-top: .2rem; text-align: center; font-size: .9rem; font-weight: 600; color: var(--success); }
 .form-success.is-shown { display: block; }
+.form-error { display: none; grid-column: 1 / -1; margin-top: .2rem; text-align: center; font-size: .9rem; font-weight: 600; color: var(--danger); }
+.form-error.is-shown { display: block; }
+.form-error a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.form-submit.is-sending { opacity: .7; cursor: progress; }
 
 /* Floating WhatsApp / Viber buttons: phones and tablets only (desktop has the contact rows) */
 .chat-fab { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 90; display: flex; flex-direction: column; align-items: center; gap: .7rem; }

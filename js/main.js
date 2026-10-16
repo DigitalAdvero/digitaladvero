@@ -17,8 +17,8 @@
 
   // Small UI strings that are set from JS rather than from data-i18n attributes.
   var UI = {
-    bs: { themeToLight: "Prebaci na svijetlu temu", themeToDark: "Prebaci na tamnu temu", menuOpen: "Otvori meni", menuClose: "Zatvori meni", step: "Korak", selected: "Odabrano", subject: "Konsultacije - " },
-    en: { themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", menuOpen: "Open menu", menuClose: "Close menu", step: "Step", selected: "Selected", subject: "Consultation - " }
+    bs: { themeToLight: "Prebaci na svijetlu temu", themeToDark: "Prebaci na tamnu temu", menuOpen: "Otvori meni", menuClose: "Zatvori meni", step: "Korak", selected: "Odabrano", subject: "Konsultacije - ", sending: "Šaljemo…" },
+    en: { themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", menuOpen: "Open menu", menuClose: "Close menu", step: "Step", selected: "Selected", subject: "Consultation - ", sending: "Sending…" }
   };
   var currentLang = "bs";
   function ui(key) { return UI[currentLang][key]; }
@@ -407,17 +407,56 @@
     });
   });
 
-  /* ---------- 11. Contact form (opens the visitor's email app or WhatsApp — GitHub Pages is static) ---------- */
+  /* ---------- 11. Contact form (GitHub Pages is static: Web3Forms emails the inquiry to digitaladvero@gmail.com;
+     without a key it opens the visitor's email app, and the second button hands the inquiry to WhatsApp) ---------- */
   (function contactForm() {
-    var form = $("#consultForm"), ok = $("#formSuccess"), okWa = $("#formSuccessWa"); if (!form) return;
+    var form = $("#consultForm"); if (!form) return;
+    var key = (form.getAttribute("data-web3forms-key") || "").trim();
+    var msgs = { mail: $("#formSuccess"), wa: $("#formSuccessWa"), sent: $("#formSent"), error: $("#formError") };
+    var submitBtn = $(".form-submit", form), submitLabel = $("[data-i18n]", submitBtn), sending = false;
+    function show(which) { Object.keys(msgs).forEach(function (k) { msgs[k].classList.toggle("is-shown", k === which); }); }
     function looksLikeContact(v) { return v.indexOf("@") > 0 || v.replace(/\D/g, "").length >= 6; }
     ["f-name", "f-biz", "f-contact", "f-type"].forEach(function (id) {
       var f = document.getElementById(id);
       f.addEventListener("input", function () { f.closest(".field").classList.remove("is-invalid"); f.removeAttribute("aria-invalid"); });
       f.addEventListener("change", function () { f.closest(".field").classList.remove("is-invalid"); f.removeAttribute("aria-invalid"); });
     });
+    function setSending(on) {
+      sending = on;
+      submitBtn.classList.toggle("is-sending", on); submitBtn.setAttribute("aria-busy", String(on)); submitBtn.setAttribute("aria-disabled", String(on)); // not .disabled, so keyboard focus stays on the button
+      if (on) { submitLabel.dataset.idle = submitLabel.textContent; submitLabel.textContent = ui("sending"); }
+      else if (submitLabel.textContent === UI.bs.sending || submitLabel.textContent === UI.en.sending) submitLabel.textContent = submitLabel.dataset.idle;
+    }
+    function send(g) {
+      var contact = g("f-contact");
+      var data = {
+        access_key: key,
+        subject: "Novi upit sa web stranice - " + g("f-biz"),
+        from_name: "DigitalAdvero web stranica",
+        "Ime i prezime": g("f-name"), "Biznis": g("f-biz"), "Kontakt": contact, "Vrsta biznisa": g("f-type"),
+        "Potrebna pomoć": g("f-help"), "Poruka": g("f-msg") || "-", "Jezik stranice": currentLang === "en" ? "engleski" : "bosanski"
+      };
+      var email = contact.match(/[^\s@,;\/<>()]+@[^\s@,;\/<>()]+\.[^\s@,;\/<>()]+/); // "061 123 456, ana@gmail.com" works too
+      if (email) data.replyto = email[0].replace(/[.,;:]+$/, "");
+      var ctrl = window.AbortController ? new AbortController() : null, timer = ctrl && setTimeout(function () { ctrl.abort(); }, 15000);
+      setSending(true); show(null);
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data), signal: ctrl ? ctrl.signal : undefined
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok || j.success === false) throw new Error(j.message || "HTTP " + r.status); });
+      }).then(function () {
+        form.reset(); show("sent");
+      }).catch(function () {
+        show("error");
+      }).then(function () {
+        if (timer) clearTimeout(timer);
+        setSending(false);
+      });
+    }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (sending) return;
       var valid = true, firstBad = null;
       ["f-name", "f-biz", "f-contact", "f-type"].forEach(function (id) {
         var f = document.getElementById(id), v = f.value.trim();
@@ -425,12 +464,16 @@
         f.closest(".field").classList.toggle("is-invalid", bad);
         if (bad) { f.setAttribute("aria-invalid", "true"); valid = false; if (!firstBad) firstBad = f; }
       });
-      if (!valid) { ok.classList.remove("is-shown"); okWa.classList.remove("is-shown"); firstBad.focus(); return; }
+      if (!valid) { show(null); firstBad.focus(); return; }
       var g = function (id) { return document.getElementById(id).value.trim(); };
       var body = "Ime: " + g("f-name") + "\nBiznis: " + g("f-biz") + "\nKontakt: " + g("f-contact") + "\nVrsta biznisa: " + g("f-type") + "\nPotrebna pomoć: " + g("f-help") + "\nPoruka: " + g("f-msg");
-      var viaWa = !!(e.submitter && e.submitter.value === "whatsapp");
-      ok.classList.toggle("is-shown", !viaWa); okWa.classList.toggle("is-shown", viaWa);
-      if (viaWa) { window.open("https://wa.me/38762810036?text=" + encodeURIComponent(ui("subject") + g("f-biz") + "\n\n" + body), "_blank", "noopener"); return; }
+      if (e.submitter && e.submitter.value === "whatsapp") {
+        show("wa");
+        window.open("https://wa.me/38762810036?text=" + encodeURIComponent(ui("subject") + g("f-biz") + "\n\n" + body), "_blank", "noopener");
+        return;
+      }
+      if (key && window.fetch) { send(g); return; }
+      show("mail");
       window.location.href = "mailto:digitaladvero@gmail.com?subject=" + encodeURIComponent(ui("subject") + g("f-biz")) + "&body=" + encodeURIComponent(body);
     });
   })();

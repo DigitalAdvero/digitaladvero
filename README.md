@@ -38,7 +38,7 @@ assets/               logos, favicon/app icons, og-image.png, audio
 - **Text:** edit the Bosnian text in `index.html`; add/adjust the matching English string in `js/i18n-en.js`.
 - **Colors / theme:** everything is a CSS variable at the top of `css/base.css`.
 - **Default theme:** dark. The visitor's choice is remembered. To follow the visitor's system setting instead, change the fallback in the small script in the `<head>` of `index.html`.
-- **Contact form:** GitHub Pages is static, so the form opens the visitor's email app with the inquiry filled in (`digitaladvero@gmail.com`). For real form submissions, point it at a form service such as Formspree or Web3Forms.
+- **Contact form:** GitHub Pages is static, so the form sends inquiries through [Web3Forms](https://web3forms.com), which emails them to `digitaladvero@gmail.com` (Reply in Gmail answers the visitor when they left an email address). The free access key sits in `data-web3forms-key` on `#consultForm` in `index.html`; to see or replace it, sign in at web3forms.com with `digitaladvero@gmail.com`. While the key is empty, the form falls back to opening the visitor's email app. The second button always hands the inquiry to WhatsApp.
 - **Local preview:** open `index.html` directly, or run any static server in this folder.
 ## The sea and the light (dark theme)
 
