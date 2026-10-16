@@ -135,6 +135,7 @@
 
     <nav class="nav-links" id="navLinks" aria-label="Glavna navigacija" data-i18n-attrs="aria-label:nav.label">
       <a href="#usluge" data-i18n="nav.services">Usluge</a>
+      <a href="#radovi" data-i18n="nav.work">Radovi</a>
       <a href="#djelatnosti" data-i18n="nav.industries">Djelatnosti</a>
       <a href="#about" data-i18n="nav.about">O nama</a>
       <a href="#kako" data-i18n="nav.how">Kako radimo</a>
@@ -162,10 +163,11 @@
 <div class="mobile-panel" id="mobilePanel" inert>
   <nav class="mobile-links" aria-label="Mobilna navigacija" data-i18n-attrs="aria-label:nav.label">
     <a href="#usluge"><small>01</small><span data-i18n="nav.services">Usluge</span></a>
-    <a href="#djelatnosti"><small>02</small><span data-i18n="nav.industries">Djelatnosti</span></a>
-    <a href="#about"><small>03</small><span data-i18n="nav.about">O nama</span></a>
-    <a href="#kako"><small>04</small><span data-i18n="nav.how">Kako radimo</span></a>
-    <a href="#faq"><small>05</small><span data-i18n="nav.faq">Pitanja</span></a>
+    <a href="#radovi"><small>02</small><span data-i18n="nav.work">Radovi</span></a>
+    <a href="#djelatnosti"><small>03</small><span data-i18n="nav.industries">Djelatnosti</span></a>
+    <a href="#about"><small>04</small><span data-i18n="nav.about">O nama</span></a>
+    <a href="#kako"><small>05</small><span data-i18n="nav.how">Kako radimo</span></a>
+    <a href="#faq"><small>06</small><span data-i18n="nav.faq">Pitanja</span></a>
   </nav>
   <div class="mobile-foot">
     <div class="lang-toggle" role="group" aria-label="Odabir jezika" data-i18n-attrs="aria-label:nav.lang">
@@ -202,7 +204,7 @@
       </ul>
       <div class="btn-row hero-actions reveal" style="--d:.3s">
         <a href="#kontakt" class="btn btn-primary magnetic"><span data-i18n="hero.cta1">Pokrenimo vaš biznis</span> <svg class="ico btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a href="#usluge" class="btn btn-secondary" data-i18n="hero.cta2">Pogledajte šta radimo</a>
+        <a href="#radovi" class="btn btn-secondary" data-i18n="hero.cta2">Pogledajte šta radimo</a>
       </div>
       <p class="hero-note reveal" style="--d:.38s"><span class="live-dot" aria-hidden="true"></span><span data-i18n="hero.note">Studentski tim iz Sarajeva · prve konsultacije su besplatne</span></p>
     </div>
@@ -554,6 +556,68 @@
   </div>
 </section>
 
+<!-- ======================= WORK (demo projects) ======================= -->
+<section class="section section-band" id="radovi" style="--gx1:50%;--gy1:0%;--gx2:50%;--gy2:100%">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="work.eyebrow">Radovi</span>
+      <h2 class="h2" data-i18n="work.title">Pogledajte šta možemo napraviti za vas.</h2>
+      <p class="lede" data-i18n="work.lede">Četiri kompletne demo stranice za različite djelatnosti. Otvorite bilo koju i isprobajte je kao da ste klijent.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <a class="work-shot" href="https://digitaladvero.github.io/noir/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/work/noir.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
+        </a>
+        <div class="work-body">
+          <div class="work-meta"><span class="work-type"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-scissors"/></svg><span data-i18n="work.1.type">Barber shop · Sarajevo</span></span><span class="work-tag" data-i18n="work.tag">Demo</span></div>
+          <h3>NOIR Barber</h3>
+          <p data-i18n="work.1.p">Tamna, elegantna stranica za muški barber shop: usluge s cijenama, tim, galerija i online zakazivanje termina.</p>
+          <ul class="work-feats"><li data-i18n="work.1.f1">Online zakazivanje</li><li data-i18n="work.1.f2">Radno vrijeme uživo</li><li data-i18n="work.1.f3">Cjenovnik usluga</li></ul>
+          <a class="work-link" href="https://digitaladvero.github.io/noir/" target="_blank" rel="noopener"><span data-i18n="work.cta">Pogledajte demo</span> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal" style="--d:.08s">
+        <a class="work-shot" href="https://digitaladvero.github.io/mora/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/work/mora.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
+        </a>
+        <div class="work-body">
+          <div class="work-meta"><span class="work-type"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-utensils"/></svg><span data-i18n="work.2.type">Restoran · Sarajevo</span></span><span class="work-tag" data-i18n="work.tag">Demo</span></div>
+          <h3>MORA</h3>
+          <p data-i18n="work.2.p">Restoran savremene kuhinje predstavljen kroz fotografije, kompletan meni i jednostavnu rezervaciju stola, na bosanskom i engleskom.</p>
+          <ul class="work-feats"><li data-i18n="work.2.f1">Rezervacija stola</li><li data-i18n="work.2.f2">Online meni</li><li data-i18n="work.2.f3">BS / EN</li></ul>
+          <a class="work-link" href="https://digitaladvero.github.io/mora/" target="_blank" rel="noopener"><span data-i18n="work.cta">Pogledajte demo</span> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal">
+        <a class="work-shot" href="https://digitaladvero.github.io/dentalis/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/work/dentalis.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
+        </a>
+        <div class="work-body">
+          <div class="work-meta"><span class="work-type"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth"/></svg><span data-i18n="work.3.type">Stomatološka ordinacija · Sarajevo</span></span><span class="work-tag" data-i18n="work.tag">Demo</span></div>
+          <h3>DENTALIS</h3>
+          <p data-i18n="work.3.p">Smirena, profesionalna stranica koja gradi povjerenje prije prvog pregleda: usluge, tim, primjeri prije/poslije i zakazivanje.</p>
+          <ul class="work-feats"><li data-i18n="work.3.f1">Zakazivanje pregleda</li><li data-i18n="work.3.f2">Prije / poslije</li><li data-i18n="work.3.f3">Predstavljanje tima</li></ul>
+          <a class="work-link" href="https://digitaladvero.github.io/dentalis/" target="_blank" rel="noopener"><span data-i18n="work.cta">Pogledajte demo</span> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="work-card reveal" style="--d:.08s">
+        <a class="work-shot" href="https://digitaladvero.github.io/luma/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/work/luma.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
+        </a>
+        <div class="work-body">
+          <div class="work-meta"><span class="work-type"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="work.4.type">Apartmani · Mostar</span></span><span class="work-tag" data-i18n="work.tag">Demo</span></div>
+          <h3>LUMA Residences</h3>
+          <p data-i18n="work.4.p">Boutique apartmani s provjerom dostupnosti, detaljnim prikazom svakog apartmana i vodičem za goste.</p>
+          <ul class="work-feats"><li data-i18n="work.4.f1">Provjera dostupnosti</li><li data-i18n="work.4.f2">Prikaz apartmana</li><li data-i18n="work.4.f3">Vodič za goste</li></ul>
+          <a class="work-link" href="https://digitaladvero.github.io/luma/" target="_blank" rel="noopener"><span data-i18n="work.cta">Pogledajte demo</span> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="fine-print reveal" data-i18n="work.note">Demo projekti za izmišljene biznise, napravljeni da pokažu naš rad. Imena, adrese, recenzije i rezervacije na njima nisu stvarni.</p>
+  </div>
+</section>
+
 <!-- ======================= INDUSTRIES ======================= -->
 <section class="section section-band" id="djelatnosti" style="--gx1:8%;--gy1:0%;--gx2:92%;--gy2:100%">
   <div class="container">
@@ -827,6 +891,7 @@
       <span class="footer-h" data-i18n="footer.links">Brze veze</span>
       <a href="#top" data-i18n="footer.home">Početna</a>
       <a href="#usluge" data-i18n="nav.services">Usluge</a>
+      <a href="#radovi" data-i18n="nav.work">Radovi</a>
       <a href="#djelatnosti" data-i18n="nav.industries">Djelatnosti</a>
       <a href="#about" data-i18n="nav.about">O nama</a>
       <a href="#kontakt" data-i18n="footer.contactlink">Kontakt</a>
