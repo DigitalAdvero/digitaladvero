@@ -799,7 +799,8 @@
       </div>
     </div>
 
-    <form class="contact-form glass spot reveal reveal--right" id="consultForm" novalidate>
+    <!-- data-web3forms-key: the free Web3Forms access key for digitaladvero@gmail.com. With a key the form sends inquiries straight to Gmail; left empty it falls back to opening the visitor's email app. -->
+    <form class="contact-form glass spot reveal reveal--right" id="consultForm" data-web3forms-key="" novalidate>
       <div class="field">
         <label for="f-name" data-i18n="form.name">Ime i prezime</label>
         <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
@@ -850,6 +851,8 @@
       <button type="submit" class="btn btn-primary btn-block form-submit"><span data-i18n="form.submit">Zatražite besplatne konsultacije</span> <svg class="ico btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       <button type="submit" name="via" value="whatsapp" class="btn btn-secondary btn-block form-submit form-submit-wa"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg> <span data-i18n="form.submitwa">Pošaljite upit preko WhatsAppa</span></button>
       <p class="form-success" id="formSuccessWa" role="status" data-i18n="form.successwa">Hvala! Otvorit će se WhatsApp sa popunjenim upitom — samo pošaljite poruku i javit ćemo vam se uskoro.</p>
+      <p class="form-success" id="formSent" role="status" data-i18n="form.sent">Hvala! Vaš upit je poslan — javit ćemo vam se uskoro.</p>
+      <p class="form-error" id="formError" role="alert" data-i18n-html="form.error">Slanje nije uspjelo. Pokušajte ponovo ili nam pišite na <a href="https://wa.me/38762810036" target="_blank" rel="noopener">WhatsApp</a> ili na <a href="mailto:digitaladvero@gmail.com">digitaladvero@gmail.com</a>.</p>
       <p class="form-success" id="formSuccess" role="status" data-i18n="form.success">Hvala! Otvorit će se vaš email klijent sa popunjenim upitom — samo pošaljite poruku i javit ćemo vam se uskoro.</p>
     </form>
   </div>

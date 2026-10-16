@@ -168,6 +168,8 @@ window.DA_EN = {
   "form.msg": "Message", "form.submit": "Request a free consultation",
   "form.submitwa": "Send your inquiry via WhatsApp",
   "form.successwa": "Thanks! WhatsApp will open with your inquiry filled in — just hit send and we'll get back to you soon.",
+  "form.sent": "Thanks! Your inquiry has been sent — we'll get back to you soon.",
+  "form.error": "Sending failed. Please try again, or message us on <a href=\"https://wa.me/38762810036\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or at <a href=\"mailto:digitaladvero@gmail.com\">digitaladvero@gmail.com</a>.",
   "form.success": "Thanks! Your email app will open with your inquiry filled in — just hit send and we'll get back to you soon.",
 
   "faq.eyebrow": "FAQ", "faq.title": "Frequently asked questions",
