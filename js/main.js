@@ -1,7 +1,7 @@
 /* DigitalAdvero — main.js
    Vanilla JS, no dependencies. Sections:
    1 helpers · 2 language · 3 theme · 4 navigation · 5 reveal + scroll effects · 6 pointer effects
-   7 hero (counter, ticker, particles) · 8 ecosystem diagram · 9 simulator · 10 FAQ · 11 contact form */
+   7 hero (counter, ticker, particles) · 8 ecosystem diagram · 9 simulator · 10 FAQ · 11 contact form · 12 chat buttons */
 (function () {
   "use strict";
 
@@ -407,9 +407,9 @@
     });
   });
 
-  /* ---------- 11. Contact form (opens the visitor's email app — GitHub Pages is static) ---------- */
+  /* ---------- 11. Contact form (opens the visitor's email app or WhatsApp — GitHub Pages is static) ---------- */
   (function contactForm() {
-    var form = $("#consultForm"), ok = $("#formSuccess"); if (!form) return;
+    var form = $("#consultForm"), ok = $("#formSuccess"), okWa = $("#formSuccessWa"); if (!form) return;
     function looksLikeContact(v) { return v.indexOf("@") > 0 || v.replace(/\D/g, "").length >= 6; }
     ["f-name", "f-biz", "f-contact", "f-type"].forEach(function (id) {
       var f = document.getElementById(id);
@@ -425,12 +425,20 @@
         f.closest(".field").classList.toggle("is-invalid", bad);
         if (bad) { f.setAttribute("aria-invalid", "true"); valid = false; if (!firstBad) firstBad = f; }
       });
-      if (!valid) { ok.classList.remove("is-shown"); firstBad.focus(); return; }
+      if (!valid) { ok.classList.remove("is-shown"); okWa.classList.remove("is-shown"); firstBad.focus(); return; }
       var g = function (id) { return document.getElementById(id).value.trim(); };
       var body = "Ime: " + g("f-name") + "\nBiznis: " + g("f-biz") + "\nKontakt: " + g("f-contact") + "\nVrsta biznisa: " + g("f-type") + "\nPotrebna pomoć: " + g("f-help") + "\nPoruka: " + g("f-msg");
-      ok.classList.add("is-shown");
+      var viaWa = !!(e.submitter && e.submitter.value === "whatsapp");
+      ok.classList.toggle("is-shown", !viaWa); okWa.classList.toggle("is-shown", viaWa);
+      if (viaWa) { window.open("https://wa.me/38762810036?text=" + encodeURIComponent(ui("subject") + g("f-biz") + "\n\n" + body), "_blank", "noopener"); return; }
       window.location.href = "mailto:digitaladvero@gmail.com?subject=" + encodeURIComponent(ui("subject") + g("f-biz")) + "&body=" + encodeURIComponent(body);
     });
+  })();
+
+  /* ---------- 12. Floating chat buttons step aside while the contact section (its own WhatsApp/Viber links) is on screen ---------- */
+  (function chatFab() {
+    var fab = $(".chat-fab"), contact = $("#kontakt"); if (!fab || !contact || !("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (en) { fab.classList.toggle("is-hidden", en[0].isIntersecting); }, { threshold: 0.15 }).observe(contact);
   })();
 
   /* ---------- Init ---------- */

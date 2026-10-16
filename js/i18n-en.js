@@ -155,6 +155,9 @@ window.DA_EN = {
   "contact.eyebrow": "Contact",
   "contact.title": "Let's launch <span class=\"text-gradient\">your business</span>.",
   "contact.lede": "Get in touch and book a free consultation — no obligations.",
+  "chat.cta": "Message us now", "chat.group": "Message us",
+  "chat.wa.label": "Message us on WhatsApp", "chat.viber.label": "Message us on Viber",
+  "chat.wa.href": "https://wa.me/38762810036?text=Hi%21%20I%27m%20interested%20in%20a%20free%20consultation%20for%20my%20business.",
   "contact.phone": "Phone", "contact.email": "Email", "contact.location": "Location", "contact.locationv": "Sarajevo, Bosnia and Herzegovina",
   "form.name": "Full name", "form.err.name": "Please enter your name.",
   "form.biz": "Business name", "form.err.biz": "Please enter your business name.",
@@ -163,6 +166,8 @@ window.DA_EN = {
   "form.type.6": "Physiotherapy", "form.type.7": "Restaurant", "form.type.8": "Professional services", "form.type.9": "Real estate", "form.type.10": "Other", "form.err.type": "Please choose a business type.",
   "form.help": "What do you need help with?", "form.help.1": "Website", "form.help.2": "Google profile", "form.help.3": "Social media", "form.help.4": "Booking system", "form.help.5": "Complete digitalization", "form.help.6": "Something else",
   "form.msg": "Message", "form.submit": "Request a free consultation",
+  "form.submitwa": "Send your inquiry via WhatsApp",
+  "form.successwa": "Thanks! WhatsApp will open with your inquiry filled in — just hit send and we'll get back to you soon.",
   "form.success": "Thanks! Your email app will open with your inquiry filled in — just hit send and we'll get back to you soon.",
 
   "faq.eyebrow": "FAQ", "faq.title": "Frequently asked questions",

@@ -584,8 +584,23 @@ a.contact-row:hover .contact-v { color: var(--accent-text); }
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; align-content: start; min-width: 0; padding: clamp(1.4rem, 3vw, 2.3rem); border-radius: var(--radius-l); box-shadow: var(--shadow-card), var(--shadow-pop); }
 @media (max-width: 640px) { .contact-form { grid-template-columns: 1fr; } }
 .form-submit { grid-column: 1 / -1; margin-top: .3rem; }
+.form-submit-wa { margin-top: 0; }
+.form-submit-wa .ico { width: 18px; height: 18px; color: #25d366; }
 .form-success { display: none; grid-column: 1 / -1; margin-top: .2rem; text-align: center; font-size: .9rem; font-weight: 600; color: var(--success); }
 .form-success.is-shown { display: block; }
+
+/* Floating WhatsApp / Viber buttons: phones and tablets only (desktop has the contact rows) */
+.chat-fab { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 90; display: flex; flex-direction: column; align-items: center; gap: .7rem; }
+.chat-fab { transition: opacity .25s ease, visibility .25s; }
+.chat-fab.is-hidden { opacity: 0; visibility: hidden; }
+.chat-fab-btn { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; color: #fff; box-shadow: 0 10px 26px -8px rgba(0, 0, 0, .55); transition: transform .2s ease; }
+.chat-fab-btn:hover, .chat-fab-btn:active { transform: scale(1.06); }
+.chat-fab-btn .ico { width: 28px; height: 28px; }
+.chat-fab-wa { background: #25d366; }
+.chat-fab-viber { background: #7360f2; width: 46px; height: 46px; }
+.chat-fab-viber .ico { width: 24px; height: 24px; }
+@media (min-width: 900px) { .chat-fab { display: none; } }
+@media (max-width: 899px) { .footer-bottom { padding-bottom: 7.5rem; } }
 
 /* ==========================================================================
    SEA + LIGHT CORE (dark theme): the old diagonal CSS beam gives way to the real light behind the hero
