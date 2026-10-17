@@ -117,8 +117,9 @@
     if (!indicator) return;
     var link = navLinks.filter(function (a) { return a.classList.contains("is-active"); })[0];
     if (!link || !link.offsetWidth) { indicator.style.opacity = "0"; return; }
-    indicator.style.width = (link.offsetWidth - 26) + "px";
-    indicator.style.transform = "translateX(" + (link.offsetLeft + 13) + "px)";
+    var inset = parseFloat(getComputedStyle(link).paddingLeft) - 1.4; // underline spans the text, whatever the link padding
+    indicator.style.width = (link.offsetWidth - 2 * inset) + "px";
+    indicator.style.transform = "translateX(" + (link.offsetLeft + inset) + "px)";
     indicator.style.opacity = "1";
   }
   function setActive(id) {
