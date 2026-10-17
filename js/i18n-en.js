@@ -140,10 +140,6 @@ window.DA_EN = {
   "price.x1": "Logo", "price.x2": "Flyer", "price.x3": "Menu", "price.x4": "Roll-up banner", "price.x5": "Photo and video shoot", "price.x6": "Online booking setup",
   "price.x7": "5 post templates", "price.x8": "Business card", "price.x9": "Poster", "price.x10": "Short video (Reels)",
   "price.terms": "One-off work: 50% up front and 50% once you approve the finished work. Monthly services are paid in advance at the start of each month, and social media packages have a three-month minimum. Printing is quoted separately before you order (except the 500 business cards in the Complete Package). You pay for the booking tool directly to its provider.",
-  "price.fd.badge": "−30%",
-  "price.fd.h": "A discount for our first five clients",
-  "price.fd.p": "We're building our portfolio, so the first five businesses get 30% off a one-off package or the first month of a monthly service, in exchange for a short testimonial, a Google review and permission to show the work. Not valid for post promotion or Instagram and Facebook ads.",
-  "price.fd.cta": "Get in touch",
 
   "team.eyebrow": "Our team",
   "team.title": "A student team.<br><span class=\"text-gradient\">Three perspectives</span> on your business.",
