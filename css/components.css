@@ -85,6 +85,16 @@
   .lang-toggle { display: inline-flex; }
   .menu-btn, .mobile-panel { display: none; }
 }
+/* seven links: tighter spacing so they stay on one line next to the buttons */
+@media (min-width: 1100px) {
+  .nav-links { gap: .1rem; }
+  .nav-links a { padding: .55rem .62rem; font-size: .9rem; white-space: nowrap; }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .nav-inner { gap: .8rem; }
+  .nav-links a { padding: .5rem .42rem; font-size: .85rem; }
+  .nav-right { gap: .45rem; }
+}
 
 /* ---------- Mobile menu ---------- */
 .mobile-panel {
@@ -113,8 +123,12 @@
 .mobile-panel.is-open .mobile-links a:nth-child(3) { transition-delay: .16s; }
 .mobile-panel.is-open .mobile-links a:nth-child(4) { transition-delay: .21s; }
 .mobile-panel.is-open .mobile-links a:nth-child(5) { transition-delay: .26s; }
+.mobile-panel.is-open .mobile-links a:nth-child(6) { transition-delay: .31s; }
+.mobile-panel.is-open .mobile-links a:nth-child(7) { transition-delay: .36s; }
 .mobile-foot { display: flex; flex-direction: column; gap: 1.1rem; margin-top: auto; padding-top: 2rem; }
 .mobile-foot .lang-toggle { display: inline-flex; align-self: flex-start; }
+/* seven links: keep the language switch and the button on short phone screens */
+@media (max-height: 800px) { .mobile-links a { padding: .6rem 0; } }
 
 /* ---------- Surfaces ---------- */
 /* Blur is reserved for surfaces that sit over moving content (nav, hero dashboard + chips); elsewhere it is not visible and only costs GPU time. */
