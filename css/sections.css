@@ -314,6 +314,7 @@
 .svc-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 680px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .svc--web, .svc--full { grid-column: 1 / -1; } }
 @media (min-width: 1040px) { .svc-grid { grid-template-columns: repeat(3, 1fr); gap: 1.1rem; } .svc--web, .svc--full { grid-column: span 2; } }
+.svc-grid .svc--lead { grid-column: 1 / -1; }
 
 .svc {
   position: relative; display: flex; flex-direction: column; gap: .7rem; padding: 1.8rem; overflow: hidden; border-radius: 14px;
