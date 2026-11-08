@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stranica nije pronađena — DigitalAdvero</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Self-contained on purpose: GitHub Pages can serve this page from any depth, so it uses no relative files. */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; text-align: center;
+    background: #0a0a0a; color: #fff; font-family: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .mark { width: 64px; margin: 0 auto 2.2rem; fill: #fff; }
+  .code {
+    font-family: "Archivo", "Inter Tight", sans-serif; font-weight: 800; font-stretch: 125%; line-height: .85; letter-spacing: -.02em;
+    font-size: clamp(6rem, 26vw, 15rem);
+    background: linear-gradient(180deg, #fff 20%, rgba(255,255,255,.18)); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  h1 { margin: 1.6rem 0 .7rem; font-size: clamp(1.6rem, 5vw, 2.6rem); font-weight: 500; text-transform: uppercase; letter-spacing: -.04em; line-height: .95; }
+  p { margin: 0 auto 2.2rem; max-width: 38ch; color: rgba(255,255,255,.6); line-height: 1.55; }
+  a {
+    display: inline-flex; align-items: center; gap: .7rem; height: 3.2rem; padding: 0 1.5rem; border-radius: 999px;
+    background: #ff5a1f; color: #0a0a0a; font-weight: 600; text-decoration: none; transition: background-color .3s;
+  }
+  a:hover { background: #fff; }
+  a:focus-visible { outline: 2px solid #ff5a1f; outline-offset: 3px; }
+</style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="2 1 215.5 129" aria-hidden="true"><path d="M2 1H81C112 1 130 20 136 42.5L103 98C92.5 117.5 82 130 62 130H2V67H32V101H80C99.5 101 111.5 82 111.5 61.5C111.5 42 100 30.5 82 30.5H2Z"/><path fill="#ff5a1f" d="M100 130L161 33L217.5 130H185L159 85L130 130Z"/></svg>
+    <div class="code" aria-hidden="true">404</div>
+    <h1>Ova stranica ne postoji</h1>
+    <p>Možda je adresa pogrešno upisana ili je stranica premještena. Vratite se na početnu i nastavite odatle.</p>
+    <a href="/" id="home">Nazad na DigitalAdvero →</a>
+  </main>
+  <script>
+    /* On github.io the site lives under /<repo>/, with a custom domain at the root. */
+    (function () {
+      var parts = location.pathname.split("/");
+      if (/\.github\.io$/.test(location.hostname) && parts.length > 2 && parts[1]) document.getElementById("home").href = "/" + parts[1] + "/";
+    })();
+  </script>
+</body>
+</html>
