@@ -10,9 +10,9 @@ Static, dependency-free site (HTML + CSS + vanilla JS) for GitHub Pages. Bosnian
 
 No build step and no `.nojekyll` file are needed. All paths are relative, so the site works both at a custom domain and under `https://<user>.github.io/<repo>/`.
 
-## Before you go live — set the real URL
+## Domain
 
-The SEO files point at `https://digitaladvero.ba/`. If the final address is different, replace it in `index.html` (canonical, `og:url`, `og:image`, `twitter:image`, the JSON-LD block), `sitemap.xml` and `robots.txt`. Search for `digitaladvero.ba` to find every place.
+The site runs at **https://digitaladvero.com/** — the `CNAME` file tells GitHub Pages to use that domain, so keep it in the repository. The same address is used in `index.html` (canonical, `og:url`, `og:image`, `twitter:image`, the JSON-LD block), `sitemap.xml` and `robots.txt`; if the domain ever changes, update those too.
 
 ## Structure
 
@@ -23,8 +23,8 @@ privatnost.html   privacy & cookie policy (linked from the cookie banner and the
 css/style.css     all styles; colours are the variables at the top
 js/app.js         intro, line-by-line text reveals, smooth scrolling, marquee, cursor, menu, form, cookie banner
 js/ring.js        the glossy 3D ring behind the hero and the contact section (WebGL)
-js/secret.js      the hidden scene (click the logo 5 times quickly)
-assets/           favicon + app icons, og-image.png (link preview), theme-song.mp3
+js/secret.js      a hidden story (its text is stored encoded)
+assets/           favicon + app icons, og-image.png (link preview), story-* files (song + images for the hidden story)
 ```
 
 ## Editing

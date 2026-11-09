@@ -87,7 +87,8 @@
       if (top === null || t > top + 3) { cur = []; lines.push(cur); top = t; }
       cur.push(list[i]);
     }
-    el.innerHTML = lines.map(function (ln, i) { return '<span class="ln"><span style="--i:' + i + '">' + join(ln) + "</span></span>"; }).join("");
+    // the space after each line keeps the words apart for search engines, screen readers and copy-paste
+    el.innerHTML = lines.map(function (ln, i) { return '<span class="ln"><span style="--i:' + i + '">' + join(ln) + (i < lines.length - 1 ? " " : "") + "</span></span>"; }).join("");
     el.classList.add("is-split");
   }
   var splits = [];

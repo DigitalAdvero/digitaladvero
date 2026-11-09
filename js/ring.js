@@ -112,7 +112,13 @@
   document.body.insertBefore(canvas, document.body.firstChild);
 
   /* ---------- size & quality ---------- */
-  var quality = 1, mobile = false;
+  // a GPU-less (software) renderer gets a smaller, slower ring so the page stays responsive
+  var soft = false;
+  try {
+    var info = gl.getExtension("WEBGL_debug_renderer_info");
+    soft = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(String(gl.getParameter(info ? info.UNMASKED_RENDERER_WEBGL : gl.RENDERER)));
+  } catch (e) { soft = false; }
+  var quality = soft ? 0.5 : 1, minQuality = soft ? 0.4 : 0.55, idleMs = soft ? 45 : 30, mobile = false;
   function size() {
     var w = window.innerWidth, h = window.innerHeight;
     mobile = w < 760;
@@ -163,20 +169,20 @@
 
   /* ---------- loop: only while the hero or the contact section is visible ---------- */
   var visHero = true, visCta = false, revealed = !!window.DA_REVEALED || !root.classList.contains("intro-on");
-  var raf = 0, t0 = performance.now(), lastFrame = 0, lastScroll = 0, slow = 0, frames = 0, lost = false;
-  function active() { return !lost && revealed && (visHero || visCta) && !document.hidden; }
+  var raf = 0, t0 = performance.now(), lastFrame = 0, lastScroll = 0, slow = 0, frames = 0, lost = false, covered = false;
+  function active() { return !lost && revealed && !covered && (visHero || visCta) && !document.hidden; }
   function frame(now) {
     raf = 0;
     if (!active()) { canvas.classList.remove("is-on"); return; }
     canvas.classList.add("is-on");
     var dt = lastFrame ? now - lastFrame : 1000;
     // ~30 fps while nothing else moves, full rate while scrolling
-    if (!reduce && dt < 30 && now - lastScroll > 400) { raf = requestAnimationFrame(frame); return; }
+    if (!reduce && dt < idleMs && (soft || now - lastScroll > 400)) { raf = requestAnimationFrame(frame); return; }
     lastFrame = now;
     // a device that cannot keep up gets a lower resolution
-    if (frames++ > 8 && quality > 0.55) {
-      slow = dt > 48 ? slow + 1 : Math.max(0, slow - 1);
-      if (slow > 12) { quality = Math.max(0.55, quality - 0.15); slow = 0; }
+    if (frames++ > 8 && quality > minQuality) {
+      slow = dt > 48 + (soft ? 30 : 0) ? slow + 1 : Math.max(0, slow - 1);
+      if (slow > 12) { quality = Math.max(minQuality, quality - 0.15); slow = 0; }
     }
     mouse.sx += (mouse.x - mouse.sx) * 0.06;
     mouse.sy += (mouse.y - mouse.sy) * 0.06;
@@ -194,6 +200,8 @@
     if (cta) io.observe(cta);
   }
   document.addEventListener("da:reveal", function () { revealed = true; kick(); });
+  // rest while the hidden logo scene (secret.js) covers the page
+  new MutationObserver(function () { covered = !!document.querySelector(".secret-overlay"); lastFrame = 0; kick(); }).observe(document.body, { childList: true });
   document.addEventListener("visibilitychange", function () { lastFrame = 0; kick(); });
   window.addEventListener("scroll", function () { lastScroll = performance.now(); kick(); }, { passive: true });
   window.addEventListener("resize", kick);
