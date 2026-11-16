@@ -479,3 +479,36 @@ svg use { pointer-events: none; }
 /* ---------- Legal page footer ---------- */
 .footer--slim { padding-top: 0; }
 .legal-body strong { color: var(--white); font-weight: 600; }
+
+/* ---------- Recommendation (a quiet ad block before the footer) ---------- */
+.ad-sec { position: relative; z-index: 1; background: var(--black); padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.ad {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.6rem clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.4rem, 3.5vw, 2.6rem); border: 1px solid var(--w15); border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, 0) 60%);
+}
+.ad-title { margin: .9rem 0 .7rem; font-size: clamp(1.5rem, 2.9vw, 2.5rem); text-transform: uppercase; letter-spacing: -.04em; line-height: .98; }
+.ad-text { max-width: 54ch; font-size: .95rem; color: var(--w70); }
+.ad-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+.ad-thumb {
+  display: block; width: clamp(120px, 14vw, 180px); padding: 0; border-radius: 10px; overflow: hidden; cursor: zoom-in;
+  transform: rotate(2.5deg); box-shadow: 0 24px 50px -24px rgba(0, 0, 0, .9), 0 0 0 1px var(--w15);
+  transition: transform .7s var(--ease), box-shadow .7s var(--ease);
+}
+.ad-thumb img { display: block; width: 100%; height: auto; }
+.ad-thumb:hover, .ad-thumb:focus-visible { transform: rotate(0deg) translate3d(0, -6px, 0) scale(1.03); box-shadow: 0 34px 60px -26px rgba(0, 0, 0, .95), 0 0 0 1px var(--w35); }
+.ad-box {
+  position: fixed; inset: 0; z-index: 700; display: grid; place-items: center; padding: clamp(.75rem, 3vw, 2rem);
+  background: rgba(10, 10, 10, .88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: 0; transition: opacity .4s var(--ease);
+}
+.ad-box[hidden] { display: none; }
+.ad-box.is-open { opacity: 1; }
+.ad-box-in { display: flex; flex-direction: column; align-items: center; gap: 1rem; max-height: 100%; transform: translate3d(0, 16px, 0) scale(.98); transition: transform .6s var(--ease); }
+.ad-box.is-open .ad-box-in { transform: none; }
+.ad-box img { display: block; width: auto; height: auto; max-width: min(92vw, 640px); max-height: calc(100vh - 7rem); max-height: calc(100svh - 7rem); border-radius: 12px; box-shadow: 0 40px 90px -30px rgba(0, 0, 0, .9); }
+.ad-box-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+@media (max-width: 700px) {
+  .ad { grid-template-columns: minmax(0, 1fr); }
+  .ad-thumb { order: -1; width: 112px; }
+}

@@ -288,6 +288,26 @@
     </div>
   </div>
 </section>
+
+<!-- ======================= RECOMMENDATION ======================= -->
+<section class="ad-sec" aria-label="Preporuka">
+  <div class="wrap">
+    <div class="ad" data-reveal>
+      <div class="ad-copy">
+        <p class="label">Preporuka</p>
+        <h2 class="ad-title">Besplatne stomatološke usluge</h2>
+        <p class="ad-text">Studenti Stomatološkog fakulteta u Sarajevu — vađenje i popravka zuba, pregled oralnih sluznica. Pod nadzorom profesora, bez zdravstvenog osiguranja.</p>
+        <div class="ad-actions">
+          <a class="btn btn-orange btn-sm" href="https://digitaladvero.github.io/maryam/" target="_blank" rel="noopener"><span class="roll"><span>Posjeti stranicu</span></span><span class="btn-ic" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+          <button type="button" class="btn btn-ghost btn-sm btn-plain" data-ad-open><span class="roll"><span>Pogledaj oglas</span></span></button>
+        </div>
+      </div>
+      <button type="button" class="ad-thumb" data-ad-open aria-label="Otvori oglas u punoj veličini">
+        <img src="assets/oglas-stomatologija.webp" alt="Oglas: besplatne stomatološke usluge studenata Stomatološkog fakulteta u Sarajevu" width="1500" height="2000" loading="lazy" decoding="async">
+      </button>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ======================= FOOTER ======================= -->
@@ -330,10 +350,23 @@
   </div>
 </div>
 
+<!-- The recommended ad, full size -->
+<div class="ad-box" id="adBox" role="dialog" aria-modal="true" aria-label="Oglas: besplatne stomatološke usluge" hidden>
+  <div class="ad-box-in">
+    <img src="assets/oglas-stomatologija.webp" alt="Besplatne stomatološke usluge: vađenje zuba, popravka zuba i pregled oralnih sluznica. Studenti Stomatološkog fakulteta, pod nadzorom profesora. Kontakt: Maryam Abdelrahman, +387 64 426 1176, Bolnička 4A, Sarajevo." width="1500" height="2000" loading="lazy" decoding="async">
+    <div class="ad-box-actions">
+      <a class="btn btn-orange btn-sm" href="https://digitaladvero.github.io/maryam/" target="_blank" rel="noopener"><span class="roll"><span>Posjeti stranicu</span></span><span class="btn-ic" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+      <a class="btn btn-ghost btn-sm btn-plain" href="tel:+387644261176"><span class="roll"><span>Pozovi</span></span></a>
+      <button type="button" class="btn btn-ghost btn-sm btn-plain" data-ad-close><span class="roll"><span>Zatvori</span></span></button>
+    </div>
+  </div>
+</div>
+
 <div class="cursor" aria-hidden="true"></div>
 
 <script src="js/app.js" defer></script>
 <script src="js/ring.js" defer></script>
+<script src="js/ad.js" defer></script>
 <script src="js/secret.js" defer></script>
 </body>
 </html>
